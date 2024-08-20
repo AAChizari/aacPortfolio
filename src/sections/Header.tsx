@@ -17,11 +17,11 @@ export const Header = () => {
           </div>
           <div className="hidden md:block">
             <nav className="flex gap-8 text-sm">
-              <a href="/aacPortfolio" className="text-white/70 hover:text-white transition">
+              <a href="/" className="text-white/70 hover:text-white transition">
                 Startseite
               </a>
               <a
-                href="/aacPortfolio/about"
+                href="/about"
                 className="text-white/70 hover:text-white transition"
               >
                 Über mich
@@ -29,7 +29,7 @@ export const Header = () => {
               <a href="#" className="text-white/70 hover:text-white transition">
                 Projekte
               </a>
-              <a href="/aacPortfolio/squadTracker" className="text-white/70 hover:text-white transition">
+              <a href="/filler" className="text-white/70 hover:text-white transition">
                 squadTracker
               </a>
             </nav>
