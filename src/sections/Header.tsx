@@ -2,8 +2,16 @@ import Link from "next/link";
 import LogoIcon from "@/assets/logo1.svg";
 import MenuIcon from "@/assets/icon-menu.svg";
 import { Button } from "@/components/Button";
+import { useRouter } from 'next/router';
+
+export function getLink(path: string): string {
+  const basePath = process.env.NODE_ENV === 'production' ? '/aacPortfolio' : '';
+  return `${basePath}${path}`;
+}
 
 export const Header = () => {
+  const router = useRouter();
+
   return (
     <header className="py-4 border-b border-white/15 md:border-none sticky top-0 z-10">
       <div className="absolute inset-0 backdrop-blur md:hidden"></div>
@@ -17,21 +25,24 @@ export const Header = () => {
           </div>
           <div className="hidden md:block">
             <nav className="flex gap-8 text-sm">
-              <a href="/" className="text-white/70 hover:text-white transition">
+              <Link href={getLink('/')} className="text-white/70 hover:text-white transition">
                 Startseite
-              </a>
-              <a
-                href="aacPortfolio/about"
+              </Link>
+              <Link
+                href={getLink('/about')}
                 className="text-white/70 hover:text-white transition"
               >
                 Über mich
-              </a>
+              </Link>
               <a href="#" className="text-white/70 hover:text-white transition">
                 Projekte
               </a>
-              <a href="/filler" className="text-white/70 hover:text-white transition">
+              <Link
+                href={getLink('/filler')}
+                className="text-white/70 hover:text-white transition"
+              >
                 squadTracker
-              </a>
+              </Link>
             </nav>
           </div>
           <div className="flex gap-4 items-center">
