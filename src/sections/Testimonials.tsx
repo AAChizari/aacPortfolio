@@ -36,7 +36,7 @@ const testimonials = [
 
 export const Testimonials = () => {
   return (
-    <section className="py-20 md:py-24">
+    <section className="pt-12 pb-20 md:pt-16 md:pb-24">
       <div className="container">
         <h2 className="text-5xl md:text-6xl text-center tracking-tighter font-medium">
           Beyond Expectations
@@ -45,7 +45,7 @@ export const Testimonials = () => {
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy eirmod tempor
         </p>
-        <div className="flex moverflow-hidden mt-10 [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
+        <div className="flex overflow-hidden mt-10 [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
           <motion.div
             initial={{
               translateX: "-50%",
