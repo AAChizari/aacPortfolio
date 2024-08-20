@@ -7,6 +7,7 @@ import rareChest from "@/assets/rareChest.png";
 import epicChest from "@/assets/epicChest.png";
 import unknownChest from "@/assets/unknownChest.png";
 import logoSB from "@/assets/logoSB.png";
+import { motion } from "framer-motion";
 
 const chestCycle =
   "CCRCRRCCRCRCCCRCRCECCRCCRRCCCECRCCCRCCCRCRCCCRCECRCCRCERCRCE";
@@ -133,9 +134,9 @@ export default function ChestPredictor() {
             Verfolge deine Truhen in Squad Busters
           </h1>
           <p className="mb-6 text-white/70 text-center max-w-2xl">
-            Füge deine letzten 3 bis 5 Truhen in den Truhen-Tracker unten ein, und
-            BusterTrack wird dir deine nächste Truhe und aktuelle Position im
-            Truhen-Zyklus anzeigen.
+            Füge deine letzten 3 bis 5 Truhen in den Truhen-Tracker unten ein,
+            und BusterTrack wird dir deine nächste Truhe und aktuelle Position
+            im Truhen-Zyklus anzeigen.
           </p>
           {/* start text Besonderheit im Truhen-Zyklus */}
           <div className="mt-8 flex flex-col items-center">
@@ -154,7 +155,6 @@ export default function ChestPredictor() {
             )}
           </div>
           {/* end text Besonderheit im Truhen-Zyklus */}
-
         </div>
 
         {/* start next chest prediction */}
@@ -236,27 +236,47 @@ export default function ChestPredictor() {
         {/* end last chests display */}
 
         {/* start add chest buttons */}
-        <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">Truhe hinzufügen</h2>
-          <div className="flex justify-center space-x-4">
+        <div className="mb-8 mt-16">
+          <h2 className="text-3xl font-bold mb-6 text-center">Truhe hinzufügen</h2>
+          <div className="flex justify-center space-x-8">
             {[
               { type: "C" as const, label: "Common" },
               { type: "R" as const, label: "Rare" },
               { type: "E" as const, label: "Epic" },
             ].map((chest) => (
-              <button
+              <motion.button
                 key={chest.type}
                 onClick={() => addChest(chest.type)}
-                className="w-20 h-20 flex flex-col items-center justify-center"
+                className="w-40 h-40 flex flex-col items-center justify-center"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                animate={{
+                  y: [0, -10, 0],
+                  rotate: [-3, 3, -3],
+                  transition: {
+                    y: {
+                      repeat: Infinity,
+                      repeatType: "reverse",
+                      duration: 1,
+                      ease: "easeInOut"
+                    },
+                    rotate: {
+                      repeat: Infinity,
+                      repeatType: "reverse",
+                      duration: 2,
+                      ease: "easeInOut"
+                    }
+                  }
+                }}
               >
                 <Image
                   src={chestImages[chest.type]}
                   alt={`${chest.label} Chest`}
-                  width={80}
-                  height={80}
+                  width={160}
+                  height={160}
                 />
-                <span className="text-xs mt-1">{chest.label}</span>
-              </button>
+                <span className="text-lg mt-2 font-semibold">{chest.label}</span>
+              </motion.button>
             ))}
           </div>
         </div>
@@ -264,7 +284,7 @@ export default function ChestPredictor() {
 
         {/* start chest cycle display */}
         <div className="overflow-x-auto">
-          <h2 className="text-2xl font-bold mb-4">
+          <h2 className="text-2xl font-bold mb-4 mt-16">
             Truhen-Zyklus (August 2024)
           </h2>
           <div className="grid grid-cols-10 md:grid-cols-12 lg:grid-cols-15 gap-1 min-w-max">
