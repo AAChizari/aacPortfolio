@@ -26,7 +26,7 @@ export const Header = () => {
               <Link href="#" className="text-white/70 hover:text-white transition">
                 Projekte
               </Link>
-              <Link href="/filler" className="text-white/70 hover:text-white transition">
+              <Link href="/squadTracker" className="text-white/70 hover:text-white transition">
                 squadTracker
               </Link>
             </nav>
