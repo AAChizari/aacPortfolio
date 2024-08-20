@@ -21,7 +21,7 @@ export const Header = () => {
                 Startseite
               </a>
               <a
-                href="/about"
+                href="aacPortfolio/about"
                 className="text-white/70 hover:text-white transition"
               >
                 Über mich
@@ -29,8 +29,8 @@ export const Header = () => {
               <a href="#" className="text-white/70 hover:text-white transition">
                 Projekte
               </a>
-              <a href="/filler" className="text-white/70 hover:text-white transition">
-                filler
+              <a href="aacPortfolio/filler" className="text-white/70 hover:text-white transition">
+                squadTracker
               </a>
             </nav>
           </div>
