@@ -4,6 +4,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  basePath: process.env.NODE_ENV === 'production' ? '/aacPortfolio' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/aacPortfolio/' : '',
   
   webpack(config) {
     // Grab the existing rule that handles SVG imports
