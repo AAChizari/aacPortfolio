@@ -29,7 +29,7 @@ export const Header = () => {
               <a href="#" className="text-white/70 hover:text-white transition">
                 Projekte
               </a>
-              <a href="aacPortfolio/filler" className="text-white/70 hover:text-white transition">
+              <a href="/filler" className="text-white/70 hover:text-white transition">
                 squadTracker
               </a>
             </nav>
