@@ -6,7 +6,7 @@ import { motion, useInView, useScroll } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 import { ButtonSkill } from "@/components/ButtonSkill";
-import ProfileImage from "@/assets/aac-Image.jpeg";
+import ProfileImage from "@/assets/aac-profileMoji.png";
 
 const AboutPage = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -35,11 +35,6 @@ const AboutPage = () => {
             <div className="flex flex-col gap-8 justify-center">
               {/* BIOGRAPHY IMAGE */}
               <div className="relative w-60 h-60">
-                <div className="absolute inset-0 rounded-xl">
-                  <div className="rounded-xl border border-[#00999933] absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent)]"></div>
-                  <div className="rounded-xl border absolute inset-0 border-[#00999966] [mask-image:linear-gradient(to_top,black,transparent)]"></div>
-                  <div className="absolute inset-0 shadow-[0_0_10px_#009999_inset] rounded-xl"></div>
-                </div>
                 <Image
                   src={ProfileImage}
                   alt="ProfileImage"
