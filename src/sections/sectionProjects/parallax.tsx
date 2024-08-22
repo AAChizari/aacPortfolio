@@ -1,32 +1,25 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import "./parallax.scss";
 import { motion, useScroll, useTransform } from "framer-motion";
+import starsBg from "@/assets/stars2.png";
+import mountainBg from "@/assets/mountains.png";
+import sunBg from "@/assets/sun.png";
+import planetBg from "@/assets/planets.png";
 
-/**
- * @ brief Definiert die möglichen Werte für das `type`-Prop.
- */
 interface ParallaxProps {
-  type: "services" | "portfolio"; ///< Mögliche Werte für den Typ
+  type: "services" | "portfolio";
 }
 
-/**
- * @ brief Die Parallax-Komponente, die einen Parallax-Effekt basierend auf dem Scrollfortschritt erzeugt.
- * 
- * @ param type Der Typ der Parallax-Darstellung, entweder "services" oder "portfolio".
- * @ return Ein JSX-Element, das den Parallax-Effekt darstellt.
- */
 const Parallax = ({ type }: ParallaxProps) => {
-  const ref = useRef<HTMLDivElement>(null); ///< Referenz auf das Div-Element
-
-  // Verwendet das useScroll-Hook, um den Scrollfortschritt zu verfolgen
+  const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
   });
 
-  // Transformiert den Scrollfortschritt in y-Positionen für Text und Hintergrund
   const yText = useTransform(scrollYProgress, [0, 1], ["0%", "500%"]);
   const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
@@ -37,24 +30,27 @@ const Parallax = ({ type }: ParallaxProps) => {
       style={{
         background:
           type === "services"
-            ? "linear-gradient(180deg, #000000, rgb(0,153,153, 0.35)"
-            : "linear-gradient(180deg, #000000, rgb(0,153,153, 0.35)",
+            ? "linear-gradient(180deg, #000000, rgba(0,153,153, 0.35))"
+            : "linear-gradient(180deg, #000000, rgba(0,153,153, 0.35))",
       }}
     >
       <motion.h1 style={{ y: yText }}>
         {type === "services" ? "Projekte" : "In Arbeit"}
       </motion.h1>
-      <motion.div className="mountains"></motion.div>
-      <motion.div
-        className="planets"
-        style={{
-          y: yBg,
-          backgroundImage: `url(${
-            type === "services" ? "/planets.png" : "/sun.png"
-          })`,
-        }}
-      ></motion.div>
-      <motion.div style={{ x: yBg }} className="stars"></motion.div>
+      <motion.div className="mountains">
+        <Image src={mountainBg} alt="Mountains" layout="fill" objectFit="cover" />
+      </motion.div>
+      <motion.div className="planets" style={{ y: yBg }}>
+        <Image
+          src={type === "services" ? planetBg : sunBg}
+          alt={type === "services" ? "Planets" : "Sun"}
+          layout="fill"
+          objectFit="cover"
+        />
+      </motion.div>
+      <motion.div style={{ x: yBg }} className="stars">
+        <Image src={starsBg} alt="Stars" layout="fill" objectFit="cover" />
+      </motion.div>
     </div>
   );
 };
