@@ -35,7 +35,7 @@ const Parallax = ({ type }: ParallaxProps) => {
       }}
     >
       <motion.h1 style={{ y: yText }}>
-        {type === "services" ? "Projekte" : "In Arbeit"}
+        {type === "services" ? "Projekte" : ""}
       </motion.h1>
       <motion.div className="mountains">
         <Image src={mountainBg} alt="Mountains" layout="fill" objectFit="cover" />

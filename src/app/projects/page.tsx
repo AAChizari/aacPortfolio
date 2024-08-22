@@ -14,7 +14,6 @@ export default function Home() {
       <section id="Portfolio">
         <Parallax type="portfolio" />
       </section>
-      <Portfolio />
     </div>
   );
 }
