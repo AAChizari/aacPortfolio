@@ -23,7 +23,7 @@ export const Header = () => {
               <Link href="/about" className="text-white/70 hover:text-white transition">
                 Über mich
               </Link>
-              <Link href="#" className="text-white/70 hover:text-white transition">
+              <Link href="/projects" className="text-white/70 hover:text-white transition">
                 Projekte
               </Link>
               <Link href="/squadTracker" className="text-white/70 hover:text-white transition">
