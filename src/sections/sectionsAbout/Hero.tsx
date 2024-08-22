@@ -223,40 +223,6 @@ const AboutPage = () => {
                 {/* EXPERIENCE LIST ITEM */}
                 <div className="flex flex-col md:flex-row justify-between min-h-[20rem] md:h-auto">
                   {/* LEFT */}
-                  <div className="w-full md:w-2/5"></div>
-                  {/* CENTER */}
-                  <div className="hidden md:flex w-1/5 justify-center">
-                    {/* LINE */}
-                    <div className="w-1 h-full bg-[#009999] rounded relative">
-                      {/* LINE CIRCLE */}
-                      <div className="absolute w-6 h-6 rounded-full ring-4 ring-[#009999] bg-white -left-2.5"></div>
-                    </div>
-                  </div>
-                  {/* RIGHT */}
-                  <FrameEffect className="w-full md:w-2/5 mb-4 md:mb-0">
-                    <div className="flex flex-col h-full">
-                      {/* JOB TITLE */}
-                      <div className="bg-[#009999] p-4 font-semibold font-serif rounded-t-lg text-2xl">
-                        JUNIOR CONSULTANT
-                      </div>
-                      {/* JOB DATE */}
-                      <div className="p-4 text-[#009999] text-2xl font-semibold">
-                        Oktober 2024 
-                      </div>
-                      {/* JOB DESC */}
-                      <div className="p-4 text-2xl flex-grow">
-                        SAP-Consulting: SAP-Utility, SAP-ABAP
-                      </div>
-
-                      {/* JOB COMPANY */}
-                      <ButtonSkill>Natuvion</ButtonSkill>
-                    </div>
-                  </FrameEffect>
-                </div>
-
-                {/* EXPERIENCE LIST ITEM */}
-                <div className="flex flex-col md:flex-row justify-between min-h-[20rem] md:h-auto">
-                  {/* LEFT */}
                   <FrameEffect className="w-full md:w-2/5 mb-4 md:mb-0">
                     <div className="flex flex-col h-full">
                       {/* JOB TITLE */}
