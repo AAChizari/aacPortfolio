@@ -9,6 +9,7 @@ import { Button } from "@/components/Button";
 import logoSB from "@/assets/logoSB.png";
 import logoAcaReact from "@/assets/logoAcaReact.png";
 import logoSultanM from "@/assets/logoSultanM.png";
+import Link from 'next/link'; // {{ edit_1 }} Importiere Link von Next.js
 
 /// Eine Liste von Portfolio-Elementen mit ID, Titel, Bild und Beschreibung.
 const items = [
@@ -17,18 +18,24 @@ const items = [
     title: "SqoudTracker",
     img: logoSB,
     desc: "Verfolge deine Truhen in Squad Busters.",
+    link: "/squadTracker",
+    name: "squadTracker"
   },
   {
     id: 2,
     title: "acaReact B.Eng-Abschlussarbeit",
     img: logoAcaReact,
     desc: "Entwicklung einer Android Applikation für die Ermittlung motorisch-kognitiver Fähigkeiten.",
+    link: "",
+    name: "inProgress"
   },
   {
     id: 3,
     title: "SultanMarket Website",
     img: logoSultanM,
     desc: "Entwicklung einer Website für ein Lokales-Lebensmittel Geschäft im Herzen Spandaus",
+    link: "https://aachizari.github.io/sultanMarketWeb/",
+    name: "SM"
   },
 ];
 
@@ -47,7 +54,9 @@ const Single = ({ item }: { item: (typeof items)[number] }) => {
           <motion.div className="textContainer" style={{ y }}>
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
-            <Button>See Demo</Button>
+            <Link href={item.link}>
+              <Button>{item.name}</Button>
+            </Link>
           </motion.div>
         </div>
       </div>

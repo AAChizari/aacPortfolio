@@ -26,9 +26,6 @@ export const Header = () => {
               <Link href="/projects" className="text-white/70 hover:text-white transition">
                 Projekte
               </Link>
-              <Link href="/squadTracker" className="text-white/70 hover:text-white transition">
-                squadTracker
-              </Link>
             </nav>
           </div>
           <div className="flex gap-4 items-center">
