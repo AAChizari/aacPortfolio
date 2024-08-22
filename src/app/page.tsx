@@ -9,8 +9,6 @@ export default function Home() {
     <>
       <Header />
       <Hero />
-      <LogoTicker />
-      <CallToAction />
       <Footer />
     </>
   );
