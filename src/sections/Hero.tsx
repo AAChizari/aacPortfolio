@@ -121,10 +121,10 @@ export const Hero = () => {
         </div>
         {/* end image */}
         <h1 className=" font-serif text-3xl md:text-6xl md:leading-none tracking-tighter bg-white bg-[radial-gradient(100%_100%_at_top_left,white,white,rgba(0,153,153,0.5))] text-transparent bg-clip-text text-center">
-          Lorem ipsum dolor amet sit.
+        Amir Aschkan Chizari
         </h1>
-        <p className=" text-lg md:text-xl text-white/70 mt-4 text-center max-w-xl mx-auto">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum harum.
+        <p className=" text-lg md:text-xl text-white/70 mt-4 text-center max-w-lg mx-auto">
+        Absolvent der Technischen Informatik im Bereich Embedded Systems.
         </p>
         <div className="flex justify-center mt-5">
           <ButtonSkill>👋 Explore My Page</ButtonSkill>

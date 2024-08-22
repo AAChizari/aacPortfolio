@@ -44,33 +44,49 @@ const AboutPage = () => {
                 />
               </div>
               {/* BIOGRAPHY TITLE */}
-              <h1 className="font-serif text-3xl md:text-6xl md:leading-none tracking-tighter bg-white bg-[radial-gradient(100%_100%_at_top_left,white,white,rgba(0,153,153,0.5))] text-transparent bg-clip-text">
-                BIOGRAPHY
+              <h1 className="font-serif text-3xl md:text-6xl md:leading-none tracking-tighter bg-[radial-gradient(100%_100%_at_top_left,white,white,rgba(0,153,153,0.5))] text-transparent bg-clip-text">
+                Biografie
               </h1>
               {/* BIOGRAPHY DESC */}
               <p className="text-lg md:text-2xl">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-                harum quibusdam cupiditate nobis accusamus sed aut aperiam,
-                reiciendis numquam! Voluptas voluptatibus obcaecati dolore
-                itaque suscipit! Vel doloremque numquam quam nihil.
+                Ich bin ein Absolvent der Technischen Informatik mit einem
+                Bachelor of Engineering im Bereich Embedded Systems. Als
+                Werkstudent war ich für die Modellierung und Implementierung von
+                IT-Sicherheitsprodukten sowie in der Erstellung technischer
+                Dokumentationen gesammelt. Meine Abschlussarbeit konzentrierte
+                sich auf die Entwicklung einer Android-Applikation.
               </p>
               {/* BIOGRAPHY QUOTE */}
               <span className="italic text-lg md:text-2xl">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Die Technologie ist das Werkzeug, mit dem wir die Zukunft
+                gestalten.
               </span>
               {/* BIOGRAPHY SIGN SVG*/}
               <div className="self-end">
                 <svg
-                  width="185"
-                  height="77"
-                  viewBox="0 0 370 114"
+                  width="352"
+                  height="177"
+                  viewBox="0 0 352 177"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M66 2C66 29.4851 68.6687 64.5118 49.3333 87.4444C42.4997 95.5495 35.7683 97.6796 26.2222 101C20.002 103.164 8.87322 103.873 4 99C-0.260934 94.7391 2.94804 88.1756 8.22222 86.2222C13.7053 84.1915 17.942 84 23.7778 84C33.359 84 41.3193 83.5602 50.2222 87C56.6125 89.469 63.5773 91.9131 69.5555 95.5C75.4778 99.0533 87.1838 104.357 93.5 99.4444C96.1292 97.3995 96.2752 92.5118 96.9444 89.5C97.9646 84.9092 92.6432 83.2024 89 83C84.472 82.7484 82.3397 81.8856 82 88C81.8025 91.5554 83.5627 94.4193 86 97C88.9648 100.139 92.0717 100.96 96 98.7778C99.3106 96.9386 98 90.7299 98 87.5C98 85.0327 98.4365 83.1348 99.2222 80.7778C100.357 77.3743 99.2311 78.4486 101.5 77.9444C105.352 77.0886 108 76.4766 108 81.5C108 85.6646 109 89.3473 109 93.5C109 100.142 108.863 95.0454 110.5 91.4444C112.765 86.4616 116.631 81.205 121.5 78.5C127.057 75.4129 126 82.1509 126 85.5C126 92.5532 124.42 102 134 102C142.932 102 153 102.569 153 91.2222C153 87.1735 153.772 81.3206 148 81C141.934 80.663 142.107 81.8068 139.5 86.5C134.378 95.7204 137.972 105 149.5 105C153.589 105 153.996 99.8977 155.5 96.8889C157.902 92.0843 161 85.4067 161 80C161 74.0547 158.407 82.7413 157.222 84.2222C155.194 86.7574 155 92.5718 155 95.7778C155 99.9302 153.8 104.999 158 107.222C161.954 109.316 164.884 106.382 167.778 103.778C171.15 100.743 175.896 99.1107 180 97C186.143 93.8409 191.659 91.4099 198.222 89.2222C206.505 86.4614 214.839 87 223.5 87C230.613 87 231.628 104 222.5 104C216.954 104 199.251 107.814 207 95.2222C211.456 87.9805 214.484 80.6007 220 73.7778C229.781 61.6805 242.696 50.8197 256.222 43C264.769 38.0591 274.192 34.6264 283 30.2222C286.55 28.4473 280.07 32.3343 278.5 33.5556C271.707 38.8391 266.609 45.3914 260.556 51.4444C255.356 56.6444 250.682 61.459 246.5 67.5C242.917 72.6757 239.364 77.3825 236.556 83C233.829 88.4524 231.82 94.3142 228.556 99.4444C226.693 102.371 225.518 107.823 222.5 109.5C214.795 113.78 217.517 100.438 218.056 95.0556C218.678 88.8318 227.982 85.7572 233.056 88.6111C239.614 92.3003 245.506 97.7883 252 101.778C254.886 103.551 259.46 107 263 107C271.267 107 273.32 81.9392 268.778 77.2222C264.112 72.3774 261.206 80.5039 261 84C260.576 91.2135 257.836 96.9269 264.778 102C272.242 107.454 285.041 112.276 292.111 104.833C298.002 98.6323 304.301 90.8902 308.556 83.4444C310.355 80.295 310.132 84.6251 309.444 86C305.387 94.1158 303 102.264 303 111.5C303 116.021 337.534 99.1863 340.5 98C347.33 95.2679 355.47 93.8299 361.778 90C363.935 88.6902 365.473 88 368 88"
+                    d="M23.9747 140.036C17.4103 140.197 12.1484 146.301 11.0135 148.331C8.76688 152.348 13.2554 156.643 22.3029 158.836C40.5432 163.258 47.8371 154.124 56.0204 149.207C97.6686 124.182 140.233 98.1577 169.518 70.5126C188.047 53.0216 203.79 34.5912 215.42 16.215C223.22 3.89133 201.478 41.0124 194.217 53.3858C182.286 73.7201 174.944 94.0674 171.647 114.863C171.417 116.311 170.408 122.679 171.245 117.399C171.897 113.289 172.815 109.236 170.568 105.162C166.944 98.5916 159.396 91.3428 138.768 92.7897C87.5467 96.3827 46.7749 122.331 25.0142 138.432C15.5796 145.413 4.91587 153.451 2.26618 161.41C-0.71326 170.361 28.1708 170.534 43.2615 168.606C100.031 161.355 149.843 143.271 186.448 125.504C221.519 108.481 253.535 89.0278 274.743 68.7612C279.051 64.6452 331.027 7.27861 302.787 6.60077C290.44 6.30439 276.84 13.8969 270.415 16.8222C228.466 35.9213 192.804 57.5143 158.781 78.8092C137.238 92.2927 116.35 106.071 105.302 121.468C98.1845 131.388 86.4792 147.349 102.427 156.94C117.861 166.224 143.722 154.454 155.459 150.117C158.57 148.968 172.165 141.31 171.515 145.411C171.105 147.998 170.695 150.585 170.285 153.172C170.007 154.926 182.439 136.925 188.176 137.715C198.666 139.158 196.669 165.037 199.754 145.58C200.105 143.362 196.708 136.021 203.203 135.377C215.822 134.126 234.969 134.506 247.33 136.029C261.87 137.82 217.626 145.352 226.415 147.442C234.968 149.475 248.64 146.253 255.12 144.668C256.189 144.407 272.841 140.656 269.921 139.626C266.555 138.439 254.145 140.878 251.447 141.423C246.491 142.424 227.712 151.032 241.187 151.666C255.034 152.318 261.875 146.963 268.706 143.161C270.682 142.062 287.607 133.467 293.149 135.906C306.126 141.62 321.755 150.194 327.428 157.402"
                     stroke="#009999"
-                    strokeWidth="2"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M347.225 149.146C339.378 151.107 329.382 153.469 328.156 157.271C327.676 158.762 328.632 154.272 328.702 153.827C329.631 147.968 330.312 142.146 334.422 136.442C337.888 131.632 344.758 127.32 345.556 122.286"
+                    stroke="#009999"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M348.501 113C348.302 114.506 348.311 115.566 348.501 116.174"
+                    stroke="#009999"
+                    stroke-width="3"
+                    stroke-linecap="round"
                   />
                 </svg>
               </div>
@@ -103,10 +119,7 @@ const AboutPage = () => {
               </motion.svg>
             </div>
             {/* SKILLS CONTAINER */}
-            <div
-              className="flex flex-col gap-8 justify-center"
-              ref={skillRef}
-            >
+            <div className="flex flex-col gap-8 justify-center" ref={skillRef}>
               {/* SKILL TITLE */}
               <motion.h1
                 initial={{ x: "-300px" }}
@@ -124,31 +137,40 @@ const AboutPage = () => {
                 animate={isSkillRefInView ? { x: 0 } : {}}
                 className="flex gap-4 flex-wrap"
               >
+                <ButtonSkill>Kotlin</ButtonSkill>
+                <ButtonSkill>C</ButtonSkill>
                 <ButtonSkill>JavaScript</ButtonSkill>
-                <ButtonSkill>TypeScript</ButtonSkill>
+                <ButtonSkill>HTML</ButtonSkill>
+                <ButtonSkill>CSS</ButtonSkill>
+
+                <ButtonSkill>Windows</ButtonSkill>
+                <ButtonSkill>Linux</ButtonSkill>
+
+                <ButtonSkill>Firebase</ButtonSkill>
+                <ButtonSkill>NOSQL</ButtonSkill>
+                <ButtonSkill>SQL</ButtonSkill>
+
                 <ButtonSkill>React.js</ButtonSkill>
                 <ButtonSkill>Next.js</ButtonSkill>
                 <ButtonSkill>SCSS</ButtonSkill>
                 <ButtonSkill>Tailwind CSS</ButtonSkill>
-                <ButtonSkill>MongoDB</ButtonSkill>
-                <ButtonSkill>PostgreSQL</ButtonSkill>
-                <ButtonSkill>Node.js</ButtonSkill>
-                <ButtonSkill>Nest.js</ButtonSkill>
-                <ButtonSkill>Express.js</ButtonSkill>
-                <ButtonSkill>Spring Boot</ButtonSkill>
-                <ButtonSkill>GraphQL</ButtonSkill>
-                <ButtonSkill>Apollo</ButtonSkill>
-                <ButtonSkill>Redux</ButtonSkill>
                 <ButtonSkill>Framer Motion</ButtonSkill>
-                <ButtonSkill>Three.js</ButtonSkill>
-                <ButtonSkill>WebGL</ButtonSkill>
-                <ButtonSkill>Webpack</ButtonSkill>
-                <ButtonSkill>Vite</ButtonSkill>
-                <ButtonSkill>Docker</ButtonSkill>
-                <ButtonSkill>AWS</ButtonSkill>
-                <ButtonSkill>Firebase</ButtonSkill>
+
                 <ButtonSkill>Git</ButtonSkill>
+                <ButtonSkill>Docker</ButtonSkill>
+                <ButtonSkill>Ansible</ButtonSkill>
+                <ButtonSkill>Cloud Engineering</ButtonSkill>
+
+                <ButtonSkill>starUML</ButtonSkill>
+                <ButtonSkill>Fusion 360</ButtonSkill>
+                <ButtonSkill>stable diffusion</ButtonSkill>
+                <ButtonSkill>Adobe Photoshop</ButtonSkill>
+                <ButtonSkill>Adobe Premiere Pro</ButtonSkill>
                 <ButtonSkill>Figma</ButtonSkill>
+
+                <ButtonSkill>MS Office</ButtonSkill>
+                <ButtonSkill>Latex</ButtonSkill>
+                <ButtonSkill>Markdown</ButtonSkill>
               </motion.div>
               {/* SKILL SCROLL SVG */}
               <motion.svg
@@ -190,7 +212,7 @@ const AboutPage = () => {
                 transition={{ delay: 0.2 }}
                 className=" py-2 font-serif text-3xl md:text-6xl md:leading-none tracking-tighter bg-white bg-[radial-gradient(100%_100%_at_top_left,white,white,rgba(0,153,153,0.5))] text-transparent bg-clip-text"
               >
-                EXPERIENCE
+                LAUFBAHN
               </motion.h1>
               {/* EXPERIENCE LIST */}
               <motion.div
@@ -201,23 +223,67 @@ const AboutPage = () => {
                 {/* EXPERIENCE LIST ITEM */}
                 <div className="flex flex-col md:flex-row justify-between min-h-[20rem] md:h-auto">
                   {/* LEFT */}
+                  <div className="w-full md:w-2/5"></div>
+                  {/* CENTER */}
+                  <div className="hidden md:flex w-1/5 justify-center">
+                    {/* LINE */}
+                    <div className="w-1 h-full bg-[#009999] rounded relative">
+                      {/* LINE CIRCLE */}
+                      <div className="absolute w-6 h-6 rounded-full ring-4 ring-[#009999] bg-white -left-2.5"></div>
+                    </div>
+                  </div>
+                  {/* RIGHT */}
                   <FrameEffect className="w-full md:w-2/5 mb-4 md:mb-0">
                     <div className="flex flex-col h-full">
                       {/* JOB TITLE */}
-                      <div className="bg-[#009999] p-4 font-semibold rounded-t-lg text-2xl">
-                        Senior JavaScript Engineer
-                      </div>
-                      {/* JOB DESC */}
-                      <div className="p-4 text-2xl italic flex-grow">
-                        I led web development, offering expertise in JavaScript
-                        frameworks.
+                      <div className="bg-[#009999] p-4 font-semibold font-serif rounded-t-lg text-2xl">
+                        JUNIOR CONSULTANT
                       </div>
                       {/* JOB DATE */}
                       <div className="p-4 text-[#009999] text-2xl font-semibold">
-                        2024 - Present
+                        Oktober 2024 
+                      </div>
+                      {/* JOB DESC */}
+                      <div className="p-4 text-2xl flex-grow">
+                        SAP-Consulting: SAP-Utility, SAP-ABAP
+                      </div>
+
+                      {/* JOB COMPANY */}
+                      <ButtonSkill>Natuvion</ButtonSkill>
+                    </div>
+                  </FrameEffect>
+                </div>
+
+                {/* EXPERIENCE LIST ITEM */}
+                <div className="flex flex-col md:flex-row justify-between min-h-[20rem] md:h-auto">
+                  {/* LEFT */}
+                  <FrameEffect className="w-full md:w-2/5 mb-4 md:mb-0">
+                    <div className="flex flex-col h-full">
+                      {/* JOB TITLE */}
+                      <div className="bg-[#009999] p-4 font-semibold font-serif rounded-t-lg text-2xl">
+                        WERKSTUDENT
+                      </div>
+                      {/* JOB DATE */}
+                      <div className="p-4 text-[#009999] text-2xl font-semibold">
+                        September 2021 - Februar 2023
+                      </div>
+                      {/* JOB DESC */}
+                      <div className="p-4 text-2xl flex-grow">
+                        IT-Sicherheit, Produktentwicklung: Im Team
+                        mitverantwortlich für Modellierung und Implementierung
+                        von IT Sicherheitsprodukten für Penetrationstests. Von
+                        der Konzeption bis zur Fertigstellung, inklusive der
+                        Hardwareauswahl, Montage und der Endtests. FDM
+                        3D-Drucktechnologie: Erfahrung in der Nutzung von FDM –
+                        Druckverfahren für die Entwicklung von Gehäusen und
+                        Komponenten. Einsatz von CAD-Tools wie Autodesk Fusion
+                        360 für präzise 3D-Modelle, welche erfolgreich gedruckt
+                        wurden. Technische Dokumentation: Mitwirkung bei der
+                        Erstellung und Pflege technischer Dokumentationen.
+                        Einblicke bekommen in: Ansible, Cloud Engineering
                       </div>
                       {/* JOB COMPANY */}
-                      <ButtonSkill>Apple</ButtonSkill>
+                      <ButtonSkill>IO-Analytica</ButtonSkill>
                     </div>
                   </FrameEffect>
                   {/* CENTER */}
@@ -248,23 +314,33 @@ const AboutPage = () => {
                   <FrameEffect className="w-full md:w-2/5 mb-4 md:mb-0">
                     <div className="flex flex-col h-full">
                       {/* JOB TITLE */}
-                      <div className="bg-[#009999] p-4 font-semibold rounded-t-lg text-2xl">
-                        Senior React Developer
-                      </div>
-                      {/* JOB DESC */}
-                      <div className="p-4 text-2xl italic flex-grow">
-                        I spearheaded React-based application development,
-                        leveraging advanced skills.
+                      <div className="bg-[#009999] p-4 font-semibold font-serif rounded-t-lg text-2xl">
+                        PRAKTIKANT
                       </div>
                       {/* JOB DATE */}
                       <div className="p-4 text-[#009999] text-2xl font-semibold">
-                        2019 - 2024
+                        April 2021 - August 2021
                       </div>
+                      {/* JOB DESC */}
+                      <div className="p-4 text-2xl flex-grow">
+                        Systemadministration Entwurf und Modellierung von
+                        Bauteilen mit Autodesk Fusion 360 Bildungsweg
+                      </div>
+
                       {/* JOB COMPANY */}
-                      <ButtonSkill>Microsoft</ButtonSkill>
+                      <ButtonSkill>IO-Analytica</ButtonSkill>
                     </div>
                   </FrameEffect>
                 </div>
+
+                <motion.h1
+                  initial={{ x: "-300px" }}
+                  animate={isExperienceRefInView ? { x: "0" } : {}}
+                  transition={{ delay: 0.2 }}
+                  className=" py-2 font-serif text-3xl md:text-6xl md:leading-none tracking-tighter bg-white bg-[radial-gradient(100%_100%_at_top_left,white,white,rgba(0,153,153,0.5))] text-transparent bg-clip-text"
+                >
+                  BILDUNGSWEG
+                </motion.h1>
 
                 {/* EXPERIENCE LIST ITEM */}
                 <div className="flex flex-col md:flex-row justify-between min-h-[20rem] md:h-auto">
@@ -272,19 +348,22 @@ const AboutPage = () => {
                   <FrameEffect className="w-full md:w-2/5 mb-4 md:mb-0">
                     <div className="flex flex-col h-full">
                       {/* JOB TITLE */}
-                      <div className="bg-[#009999] p-4 font-semibold rounded-t-lg text-2xl">
-                        Freelancer
-                      </div>
-                      {/* JOB DESC */}
-                      <div className="p-4 text-2xl italic flex-grow">
-                        I provided web solutions, applying a range of
-                        technologies to address client requirements.
+                      <div className="bg-[#009999] p-4 font-semibold font-serif rounded-t-lg text-2xl">
+                        BACHLOR OF ENGINEERING
                       </div>
                       {/* JOB DATE */}
                       <div className="p-4 text-[#009999] text-2xl font-semibold">
-                        2010 - 2019
+                        2015 - 2024
                       </div>
+                      {/* JOB DESC */}
+                      <div className="p-4 text-2xl flex-grow">
+                        Meine Abschlussarbeit konzentrierte sich auf die
+                        Entwicklung einer App als Reaktionsmessgerät für die
+                        Ermittlung motorisch-kognitiver Fähigkeiten
+                      </div>
+                      <ButtonSkill>BHT-Berlin</ButtonSkill>
                     </div>
+                    
                   </FrameEffect>
                   {/* CENTER */}
                   <div className="hidden md:flex w-1/5 justify-center">
