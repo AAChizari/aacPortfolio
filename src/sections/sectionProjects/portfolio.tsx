@@ -15,14 +15,6 @@ import Link from 'next/link'; // {{ edit_1 }} Importiere Link von Next.js
 const items = [
   {
     id: 1,
-    title: "SquadTracker",
-    img: logoSB,
-    desc: "Verfolge deine Truhen in Squad Busters.",
-    link: "/squadTracker",
-    name: "squadTracker"
-  },
-  {
-    id: 2,
     title: "acaReact B.Eng-Abschlussarbeit",
     img: logoAcaReact,
     desc: "Entwicklung einer Android Applikation für die Ermittlung motorisch-kognitiver Fähigkeiten.",
@@ -30,12 +22,20 @@ const items = [
     name: "inProgress"
   },
   {
-    id: 3,
+    id: 2,
     title: "SultanMarket Website",
     img: logoSultanM,
     desc: "Entwicklung einer Website für ein Lokales-Lebensmittel Geschäft im Herzen Spandaus",
     link: "https://aachizari.github.io/sultanMarketWeb/",
     name: "Link"
+  },
+  {
+    id: 3,
+    title: "SquadTracker",
+    img: logoSB,
+    desc: "Verfolge deine Truhen in Squad Busters.",
+    link: "/squadTracker",
+    name: "squadTracker"
   },
 ];
 
