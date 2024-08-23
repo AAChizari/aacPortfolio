@@ -35,7 +35,7 @@ const AboutPage = () => {
                   alt="ProfileImage"
                   width={112}
                   height={112}
-                  className="w-60 h-60 rounded-xl object-cover relative z-10"
+                  className="w-60 h-60 rounded-xl object-cover relative"
                 />
               </div>
               {/* BIOGRAPHY TITLE */}
@@ -48,8 +48,9 @@ const AboutPage = () => {
                 Bachelor of Engineering im Bereich Embedded Systems. Als
                 Werkstudent war ich für die Modellierung und Implementierung von
                 IT-Sicherheitsprodukten sowie in der Erstellung technischer
-                Dokumentationen gesammelt. Meine Abschlussarbeit konzentrierte
-                sich auf die Entwicklung einer Android-Applikation.
+                Dokumentationen verantwortlich. Meine Abschlussarbeit
+                konzentrierte sich auf die Entwicklung einer
+                Android-Applikation.
               </p>
               {/* BIOGRAPHY QUOTE */}
               <span className="italic text-lg md:text-2xl">
@@ -135,7 +136,7 @@ const AboutPage = () => {
                 <ButtonSkill>Kotlin</ButtonSkill>
                 <ButtonSkill>C</ButtonSkill>
                 <ButtonSkill>JavaScript</ButtonSkill>
-                <ButtonSkill>HTML</ButtonSkill>
+                <ButtonSkill>TypeScript</ButtonSkill>
                 <ButtonSkill>CSS</ButtonSkill>
 
                 <ButtonSkill>Windows</ButtonSkill>
@@ -230,18 +231,13 @@ const AboutPage = () => {
                       </div>
                       {/* JOB DESC */}
                       <div className="p-4 text-2xl flex-grow">
-                        IT-Sicherheit, Produktentwicklung: Im Team
-                        mitverantwortlich für Modellierung und Implementierung
-                        von IT Sicherheitsprodukten für Penetrationstests. Von
-                        der Konzeption bis zur Fertigstellung, inklusive der
-                        Hardwareauswahl, Montage und der Endtests. FDM
-                        3D-Drucktechnologie: Erfahrung in der Nutzung von FDM –
-                        Druckverfahren für die Entwicklung von Gehäusen und
-                        Komponenten. Einsatz von CAD-Tools wie Autodesk Fusion
-                        360 für präzise 3D-Modelle, welche erfolgreich gedruckt
-                        wurden. Technische Dokumentation: Mitwirkung bei der
-                        Erstellung und Pflege technischer Dokumentationen.
-                        Einblicke bekommen in: Ansible, Cloud Engineering
+                        IT-Sicherheit & Produktentwicklung: Modellierung und
+                        Implementierung von Sicherheitsprodukten für
+                        Penetrationstests, Hardwareauswahl, Endtests. FDM
+                        3D-Druck: Erfahrung mit FDM-Verfahren, CAD-Tools für
+                        Gehäuseentwicklung. Technische Dokumentation: Erstellung
+                        und Pflege technischer Dokumentationen. Einblicke:
+                        Ansible, Cloud Engineering.
                       </div>
                       {/* JOB COMPANY */}
                       <ButtonSkill>IO-Analytica</ButtonSkill>
@@ -324,7 +320,6 @@ const AboutPage = () => {
                       </div>
                       <ButtonSkill>BHT-Berlin</ButtonSkill>
                     </div>
-                    
                   </FrameEffect>
                   {/* CENTER */}
                   <div className="hidden md:flex w-1/5 justify-center">
