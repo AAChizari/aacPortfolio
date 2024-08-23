@@ -20,12 +20,7 @@ const AboutPage = () => {
   const isExperienceRefInView = useInView(experienceRef, { margin: "-100px" });
 
   return (
-    <motion.div
-      className="h-full"
-      initial={{ y: "-200vh" }}
-      animate={{ y: "0%" }}
-      transition={{ duration: 1 }}
-    >
+    <motion.div>
       {/* CONTAINER */}
       <div className="h-full lg:flex" ref={containerRef}>
         {/* TEXT CONTAINER */}
