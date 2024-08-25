@@ -1,0 +1,63 @@
+### TODOO
+
+### FOOTER
++ ICONS UMÄNDERN IN JOBWEBSITES
++ MIT LINKS VERSEHEN
+
+### COMMENTS
+SectionHeader überall verwenden 
+
+
+
+
+
+
+
+
+
+IT -Sicherheit, Produktentwicklung: 
+Im Team mitverantwortlich für Modellierung
+und Implementierung von IT Sicherheitsprodukten für Penetrationstests. 
+Von der Konzeption bis zur Fertigstellung, inklusive der Hardwareauswahl, Montage und
+der Endtests.
+FDM 3D-Drucktechnologie: 
+Nutzung von FDM - Druckverfahren
+für die Entwicklung von Gehäusen und Komponenten. Einsatz von CAD-Tools wie
+Autodesk Fusion 360 für präzise 3D-Modelle, welche erfolgreich gedruckt wurden.
+Technische Dokumentation: 
+Mitwirkung bei der Erstellung und Pflege technischer
+Dokumentationen.
+
+
+
+Umsetzung und Mitwirkung an: 
+Design und 3D-Druck von Gehäuseteilen
+Tests von Komponenten, Montage und Endtest von Geräten
+Softwareentwicklung durch Tests von Geräten im praktischen Einsatz
+Erstellung (Adobe, Markdown, LaTex, PDF) und Herstellung von Dokumentationen
+
+
+
+
+          <div
+            key={testimonial.name}
+            className="bg-gray-800 rounded-3xl p-6 mt-6 relative overflow-hidden z-10"
+          >
+            <div
+              className="absolute inset-0 opacity-5 -z-10"
+              style={{ backgroundImage: `url(${grain.src})` }}
+            ></div>
+
+
+
+            <div className="container">
+        {testimonials.map((testimonial) => (
+          <Card key={testimonial.name}>
+
+            <img src={testimonial.avatar.src} alt={testimonial.name} />
+            <div>{testimonial.name}</div>
+            <div>{testimonial.position}</div>
+            <p>{testimonial.text}</p>
+          </Card>
+        ))}
+      </div>

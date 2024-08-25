@@ -12,6 +12,7 @@ import {
 import { useRef } from "react";
 import Image from "next/image";
 import { ButtonSkill } from "@/components/ButtonSkill";
+import { SectionHeader } from "@/components/SectionHeader";
 
 export const Hero = () => {
   const sectionRef = useRef(null);
