@@ -3,23 +3,29 @@ export const SectionHeader = ({
   colorTitle,
   description,
 }: {
-  title: string;
-  colorTitle: string;
-  description: string;
+  title?: string;
+  colorTitle?: string;
+  description?: string;
 }) => {
   return (
     <>
-      <div className="flex justify-center">
-        <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text text-transparent">
-          {colorTitle}
+      {colorTitle && (
+        <div className="flex justify-center">
+          <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text text-transparent">
+            {colorTitle}
+          </p>
+        </div>
+      )}
+      {title && (
+        <h2 className="font-serif text-3xl md:text-5xl text-center mt-6">
+          {title}
+        </h2>
+      )}
+      {description && (
+        <p className="text-center md:text-lg lg:text-xl text-white/60 mt-4">
+          {description}
         </p>
-      </div>
-      <h2 className="font-serif text-3xl md:text-5xl text-center mt-6">
-        {title}
-      </h2>
-      <p className="text-center md:text-lg lg:text-xl text-white/60 mt-4">
-        {description}
-      </p>
+      )}
     </>
   );
 };
