@@ -2,27 +2,37 @@ export const SectionHeader = ({
   title,
   colorTitle,
   description,
+  titleSize = 'text-3xl md:text-5xl',
+  titleFont = 'font-serif',
+  colorTitleSize = 'text-lg',
+  colorTitleFont = 'font-semibold',
+  descriptionSize = 'md:text-lg lg:text-xl',
+  descriptionFont = 'font-sans',
 }: {
   title?: string;
   colorTitle?: string;
   description?: string;
+  titleSize?: string;
+  titleFont?: string;
+  colorTitleSize?: string;
+  colorTitleFont?: string;
+  descriptionSize?: string;
+  descriptionFont?: string;
 }) => {
   return (
     <>
       {colorTitle && (
-        <div className="flex justify-center">
-          <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text text-transparent">
+          <p className={`mt-4 tracking-wide bg-gradient-to-r from-[#6ee7b7] to-[#009999] bg-clip-text text-transparent ${colorTitleSize} ${colorTitleFont}`}>
             {colorTitle}
           </p>
-        </div>
       )}
       {title && (
-        <h2 className="font-serif text-3xl md:text-5xl text-center mt-6">
+        <h2 className={`mt-4 ${titleSize} ${titleFont}`}>
           {title}
         </h2>
       )}
       {description && (
-        <p className="text-center md:text-lg lg:text-xl text-white/60 mt-4">
+        <p className={`text-white/60 mt-4 ${descriptionSize} ${descriptionFont}`}>
           {description}
         </p>
       )}

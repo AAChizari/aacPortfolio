@@ -1,5 +1,6 @@
 "use client";
 
+import { SectionHeader } from "@/components/SectionHeader";
 import { FrameEffect } from "@/components/FrameEffect";
 import Brain from "@/components/brain";
 import { motion, useInView, useScroll } from "framer-motion";
@@ -27,7 +28,7 @@ const AboutPage = () => {
         <div className="h-full overflow-y-auto lg:w-2/3 xl:w-3/4">
           <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-24 flex flex-col gap-16 md:gap-24 lg:gap-32">
             {/* BIOGRAPHY CONTAINER */}
-            <div className="flex flex-col gap-8 justify-center">
+            <div className="flex flex-col gap-2 justify-center">
               {/* BIOGRAPHY IMAGE */}
               <div className="relative w-60 h-60">
                 <Image
@@ -39,24 +40,29 @@ const AboutPage = () => {
                 />
               </div>
               {/* BIOGRAPHY TITLE */}
-              <h1 className="font-serif text-3xl md:text-6xl md:leading-none tracking-tighter bg-[radial-gradient(100%_100%_at_top_left,white,white,rgba(0,153,153,0.5))] text-transparent bg-clip-text">
-                Biografie
-              </h1>
+              <SectionHeader
+                colorTitle="Biografie"
+                colorTitleSize="text-3xl md:text-3xl "
+                colorTitleFont="font-bold font-serif"
+              />
               {/* BIOGRAPHY DESC */}
-              <p className="text-lg md:text-2xl">
-                Ich bin ein Absolvent der Technischen Informatik mit einem
+              <SectionHeader
+                title="Ich bin ein Absolvent der Technischen Informatik mit einem
                 Bachelor of Engineering im Bereich Embedded Systems. Als
                 Werkstudent war ich für die Modellierung und Implementierung von
                 IT-Sicherheitsprodukten sowie in der Erstellung technischer
                 Dokumentationen verantwortlich. Meine Abschlussarbeit
                 konzentrierte sich auf die Entwicklung einer
-                Android-Applikation.
-              </p>
+                Android-Applikation."
+                titleSize="text-lg md:text-2xl"
+              ></SectionHeader>
               {/* BIOGRAPHY QUOTE */}
-              <span className="italic text-lg md:text-2xl">
-                Die Technologie ist das Werkzeug, mit dem wir die Zukunft
-                gestalten.
-              </span>
+              <SectionHeader
+                description="Die Technologie ist das Werkzeug, mit dem wir die Zukunft
+                gestalten."
+                descriptionSize="text-lg md:text-2xl"
+                descriptionFont="font-sans"
+              ></SectionHeader>
               {/* BIOGRAPHY SIGN SVG*/}
               <div className="self-end">
                 <svg
