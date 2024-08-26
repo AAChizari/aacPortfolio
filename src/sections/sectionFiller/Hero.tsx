@@ -10,7 +10,7 @@ import logoSB from "@/assets/logoSB.png";
 import { motion } from "framer-motion";
 
 const chestCycle =
-  "CCRCRRCCRCRCCCRCRCECCRCCRRCCCECRCCCRCCCRCRCCCRCECRCCRCERCRCE";
+  "CRRCCRCCECRCRCCCRCRCCRRCCCECERCCRCCCRCRCCCRCECCCCRCERCRCECCR";
 
 const explanationText = `
 Besonderheit im Truhen-Zyklus:

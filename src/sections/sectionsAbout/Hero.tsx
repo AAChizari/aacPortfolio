@@ -55,6 +55,7 @@ const AboutPage = () => {
                 konzentrierte sich auf die Entwicklung einer
                 Android-Applikation."
                 titleSize="text-lg md:text-2xl"
+                titleFont="font-aacFont"
               ></SectionHeader>
               {/* BIOGRAPHY QUOTE */}
               <SectionHeader
