@@ -7,10 +7,10 @@ import PageTransition from "@/sections/PageTransition";
 
 export default function Home() {
   return (
-    <PageTransition>
+    <>
       <Header />
       <Hero />
       <Footer/>
-    </PageTransition>
+    </>
   );
 }

@@ -1,17 +1,34 @@
 interface FrameEffectProps {
   children: React.ReactNode;
   className?: string;
+  borderColor?: string;
+  shadowColor?: string;
+  backgroundColor?: string;
+  padding?: string;
+  borderRadius?: string;
+  shadowIntensity?: number;
+  borderWidth?: string;
 }
 
-export const FrameEffect = ({ children, className = '' }: FrameEffectProps) => {
+export const FrameEffect = ({
+  children,
+  className = '',
+  borderColor = '#009999',
+  shadowColor = '#009999',
+  backgroundColor = 'transparent',
+  padding = 'p-2',
+  borderRadius = 'rounded-lg',
+  shadowIntensity = 10,
+  borderWidth = 'border'
+}: FrameEffectProps) => {
   return (
     <div className={`relative h-full ${className}`}>
-      <div className="absolute inset-0 rounded-lg">
-        <div className="rounded-lg border border-[#009999] absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent)]"></div>
-        <div className="rounded-lg border absolute inset-0 border-[#009999] [mask-image:linear-gradient(to_top,black,transparent)]"></div>
-        <div className="absolute inset-0 shadow-[0_0_10px_#009999_inset] rounded-lg"></div>
+      <div className={`absolute inset-0 ${borderRadius}`} style={{ backgroundColor }}>
+        <div className={`${borderRadius} ${borderWidth} border-[${borderColor}] absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent)]`}></div>
+        <div className={`${borderRadius} ${borderWidth} absolute inset-0 border-[${borderColor}] [mask-image:linear-gradient(to_top,black,transparent)]`}></div>
+        <div className={`absolute inset-0 shadow-[0_0_${shadowIntensity}px_${shadowColor}_inset] ${borderRadius}`}></div>
       </div>
-      <div className="relative z-10 h-full overflow-hidden">
+      <div className={`relative z-10 h-full overflow-hidden ${padding}`}>
         {children}
       </div>
     </div>

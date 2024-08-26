@@ -1,6 +1,6 @@
 "use client";
 
-import { SectionHeader } from "@/components/SectionHeader";
+import { Text } from "@/components/Text";
 import { FrameEffect } from "@/components/FrameEffect";
 import Brain from "@/components/brain";
 import { motion, useInView, useScroll } from "framer-motion";
@@ -40,13 +40,13 @@ const AboutPage = () => {
                 />
               </div>
               {/* BIOGRAPHY TITLE */}
-              <SectionHeader
+              <Text
                 colorTitle="Biografie"
                 colorTitleSize="text-3xl md:text-3xl "
                 colorTitleFont="font-bold font-serif"
               />
               {/* BIOGRAPHY DESC */}
-              <SectionHeader
+              <Text
                 title="Ich bin ein Absolvent der Technischen Informatik mit einem
                 Bachelor of Engineering im Bereich Embedded Systems. Als
                 Werkstudent war ich für die Modellierung und Implementierung von
@@ -56,14 +56,14 @@ const AboutPage = () => {
                 Android-Applikation."
                 titleSize="text-lg md:text-2xl"
                 titleFont="font-aacFont"
-              ></SectionHeader>
+              ></Text>
               {/* BIOGRAPHY QUOTE */}
-              <SectionHeader
+              <Text
                 description="Die Technologie ist das Werkzeug, mit dem wir die Zukunft
                 gestalten."
                 descriptionSize="text-lg md:text-2xl"
                 descriptionFont="font-sans"
-              ></SectionHeader>
+              ></Text>
               {/* BIOGRAPHY SIGN SVG*/}
               <div className="self-end">
                 <svg
