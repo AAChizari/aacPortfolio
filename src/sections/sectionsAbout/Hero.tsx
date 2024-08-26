@@ -2,12 +2,17 @@
 
 import { Text } from "@/components/Text";
 import { FrameEffect } from "@/components/FrameEffect";
-import Brain from "@/components/brain";
 import { motion, useInView, useScroll } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 import { ButtonSkill } from "@/components/ButtonSkill";
+
+import Brain from "@/components/brain";
 import ProfileImage from "@/assets/aac-profileMoji.png";
+import IOAnalytica from "@/assets/logoIOanalytica.png";
+import logoBHT from "@/assets/logoBHT.png";
+
+import chromIcon from "@/assets/iconSkills/chrom.png";
 
 const AboutPage = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -55,7 +60,6 @@ const AboutPage = () => {
                 konzentrierte sich auf die Entwicklung einer
                 Android-Applikation."
                 titleSize="text-lg md:text-2xl"
-                titleFont="font-aacFont"
               ></Text>
               {/* BIOGRAPHY QUOTE */}
               <Text
@@ -135,46 +139,43 @@ const AboutPage = () => {
                 SKILLS
               </motion.h1>
               {/* SKILL LIST */}
-              <motion.div
-                initial={{ x: "-300px" }}
-                animate={isSkillRefInView ? { x: 0 } : {}}
-                className="flex gap-4 flex-wrap"
-              >
-                <ButtonSkill>Kotlin</ButtonSkill>
-                <ButtonSkill>C</ButtonSkill>
-                <ButtonSkill>JavaScript</ButtonSkill>
-                <ButtonSkill>TypeScript</ButtonSkill>
-                <ButtonSkill>CSS</ButtonSkill>
+              <div>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {[
+                      "Kotlin",
+                      "C",
+                      "JavaScript",
+                      "TypeScript",
+                      "CSS",
+                      "Windows",
+                      "Linux",
+                      "Firebase",
+                      "NOSQL",
+                      "SQL",
+                      "React.js",
+                      "Next.js",
+                      "SCSS",
+                      "Tailwind CSS",
+                      "Framer Motion",
+                      "Git",
+                      "Docker",
+                      "Ansible",
+                      "Cloud Engineering",
+                      "starUML",
+                      "Fusion 360",
+                      "stable diffusion",
+                      "Adobe Photoshop",
+                      "Adobe Premiere Pro",
+                      "Figma",
+                      "MS Office",
+                      "Latex",
+                      "Markdown",
+                    ].map((skill) => (
+                      <ButtonSkill key={skill}>{skill}</ButtonSkill>
+                    ))}
+                  </div>
+              </div>
 
-                <ButtonSkill>Windows</ButtonSkill>
-                <ButtonSkill>Linux</ButtonSkill>
-
-                <ButtonSkill>Firebase</ButtonSkill>
-                <ButtonSkill>NOSQL</ButtonSkill>
-                <ButtonSkill>SQL</ButtonSkill>
-
-                <ButtonSkill>React.js</ButtonSkill>
-                <ButtonSkill>Next.js</ButtonSkill>
-                <ButtonSkill>SCSS</ButtonSkill>
-                <ButtonSkill>Tailwind CSS</ButtonSkill>
-                <ButtonSkill>Framer Motion</ButtonSkill>
-
-                <ButtonSkill>Git</ButtonSkill>
-                <ButtonSkill>Docker</ButtonSkill>
-                <ButtonSkill>Ansible</ButtonSkill>
-                <ButtonSkill>Cloud Engineering</ButtonSkill>
-
-                <ButtonSkill>starUML</ButtonSkill>
-                <ButtonSkill>Fusion 360</ButtonSkill>
-                <ButtonSkill>stable diffusion</ButtonSkill>
-                <ButtonSkill>Adobe Photoshop</ButtonSkill>
-                <ButtonSkill>Adobe Premiere Pro</ButtonSkill>
-                <ButtonSkill>Figma</ButtonSkill>
-
-                <ButtonSkill>MS Office</ButtonSkill>
-                <ButtonSkill>Latex</ButtonSkill>
-                <ButtonSkill>Markdown</ButtonSkill>
-              </motion.div>
               {/* SKILL SCROLL SVG */}
               <motion.svg
                 initial={{ opacity: 0.2, y: 0 }}
@@ -229,25 +230,42 @@ const AboutPage = () => {
                   <FrameEffect className="w-full md:w-2/5 mb-4 md:mb-0">
                     <div className="flex flex-col h-full">
                       {/* JOB TITLE */}
-                      <div className="bg-[#009999] p-4 font-semibold font-serif rounded-t-lg text-2xl">
-                        WERKSTUDENT
-                      </div>
-                      {/* JOB DATE */}
-                      <div className="p-4 text-[#009999] text-2xl font-semibold">
-                        September 2021 - Februar 2023
+                      <div>
+                        <Text
+                          colorTitle="WERKSTUDENT"
+                          colorTitleSize="text-2xl"
+                          colorTitleFont="font-bold"
+                          colorTitlePosition="text-center"
+                        />
                       </div>
                       {/* JOB DESC */}
-                      <div className="p-4 text-2xl flex-grow">
-                        IT-Sicherheit & Produktentwicklung: Modellierung und
-                        Implementierung von Sicherheitsprodukten für
-                        Penetrationstests, Hardwareauswahl, Endtests. FDM
-                        3D-Druck: Erfahrung mit FDM-Verfahren, CAD-Tools für
-                        Gehäuseentwicklung. Technische Dokumentation: Erstellung
-                        und Pflege technischer Dokumentationen. Einblicke:
-                        Ansible, Cloud Engineering.
+                      <div>
+                        <Text
+                          normalText="IT-Sicherheit & Produktentwicklung: Modellierung und Implementierung von Sicherheitsprodukten für Penetrationstests, Hardwareauswahl, Endtests. FDM 3D-Druck: Erfahrung mit FDM-Verfahren, CAD-Tools für Gehäuseentwicklung. Technische Dokumentation: Erstellung und Pflege technischer Dokumentationen. Einblicke: Ansible, Cloud Engineering."
+                          normalTextSize="text-lg"
+                          normalTextFont="font-semibold"
+                          normalTextPadding="p-4"
+                        />
+                      </div>
+                      {/* JOB DATE */}
+                      <div>
+                        <Text
+                          normalText="September 2021 - Februar 2023"
+                          normalTextSize="text-lg"
+                          normalTextFont="font-semibold"
+                          normalTextPadding="p-4"
+                          normalTextPosition="text-center"
+                        />
                       </div>
                       {/* JOB COMPANY */}
-                      <ButtonSkill>IO-Analytica</ButtonSkill>
+                      <div className="flex justify-center">
+                        <Image
+                          src={IOAnalytica}
+                          alt="IOAnalytica"
+                          width={100}
+                          height={100}
+                        />
+                      </div>
                     </div>
                   </FrameEffect>
                   {/* CENTER */}
@@ -278,33 +296,45 @@ const AboutPage = () => {
                   <FrameEffect className="w-full md:w-2/5 mb-4 md:mb-0">
                     <div className="flex flex-col h-full">
                       {/* JOB TITLE */}
-                      <div className="bg-[#009999] p-4 font-semibold font-serif rounded-t-lg text-2xl">
-                        PRAKTIKANT
-                      </div>
-                      {/* JOB DATE */}
-                      <div className="p-4 text-[#009999] text-2xl font-semibold">
-                        April 2021 - August 2021
+                      <div>
+                        <Text
+                          colorTitle="PRAKTIKANT"
+                          colorTitleSize="text-2xl"
+                          colorTitleFont="font-bold"
+                          colorTitlePosition="text-center"
+                        />
                       </div>
                       {/* JOB DESC */}
-                      <div className="p-4 text-2xl flex-grow">
-                        Systemadministration Entwurf und Modellierung von
-                        Bauteilen mit Autodesk Fusion 360 Bildungsweg
+                      <div>
+                        <Text
+                          normalText="Systemadministration Entwurf und Modellierung von Bauteilen mit Autodesk Fusion 360 Bildungsweg"
+                          normalTextSize="text-lg"
+                          normalTextFont="font-semibold"
+                          normalTextPadding="p-4"
+                        />
                       </div>
-
+                      {/* JOB DATE */}
+                      <div>
+                        <Text
+                          normalText="April 2021 - August 2021"
+                          normalTextSize="text-lg"
+                          normalTextFont="font-semibold"
+                          normalTextPadding="p-4"
+                          normalTextPosition="text-center"
+                        />
+                      </div>
                       {/* JOB COMPANY */}
-                      <ButtonSkill>IO-Analytica</ButtonSkill>
+                      <div className="flex justify-center">
+                        <Image
+                          src={IOAnalytica}
+                          alt="IOAnalytica"
+                          width={100}
+                          height={100}
+                        />
+                      </div>
                     </div>
                   </FrameEffect>
                 </div>
-
-                <motion.h1
-                  initial={{ x: "-300px" }}
-                  animate={isExperienceRefInView ? { x: "0" } : {}}
-                  transition={{ delay: 0.2 }}
-                  className=" py-2 font-serif text-3xl md:text-6xl md:leading-none tracking-tighter bg-white bg-[radial-gradient(100%_100%_at_top_left,white,white,rgba(0,153,153,0.5))] text-transparent bg-clip-text"
-                >
-                  BILDUNGSWEG
-                </motion.h1>
 
                 {/* EXPERIENCE LIST ITEM */}
                 <div className="flex flex-col md:flex-row justify-between min-h-[20rem] md:h-auto">
@@ -312,20 +342,44 @@ const AboutPage = () => {
                   <FrameEffect className="w-full md:w-2/5 mb-4 md:mb-0">
                     <div className="flex flex-col h-full">
                       {/* JOB TITLE */}
-                      <div className="bg-[#009999] p-4 font-semibold font-serif rounded-t-lg text-2xl">
-                        BACHLOR OF ENGINEERING
-                      </div>
-                      {/* JOB DATE */}
-                      <div className="p-4 text-[#009999] text-2xl font-semibold">
-                        2015 - 2024
+                      <div>
+                        <Text
+                          colorTitle="BACHLOR OF ENGINEERING"
+                          colorTitleSize="text-2xl"
+                          colorTitleFont="font-bold"
+                          colorTitlePosition="text-center"
+                        />
                       </div>
                       {/* JOB DESC */}
-                      <div className="p-4 text-2xl flex-grow">
-                        Meine Abschlussarbeit konzentrierte sich auf die
-                        Entwicklung einer App als Reaktionsmessgerät für die
-                        Ermittlung motorisch-kognitiver Fähigkeiten
+                      <div>
+                        <Text
+                          normalText="Meine Abschlussarbeit konzentrierte sich auf die Entwicklung einer App als Reaktionsmessgerät für die Ermittlung motorisch-kognitiver Fähigkeiten"
+                          normalTextSize="text-lg"
+                          normalTextFont="font-semibold"
+                          normalTextPadding="p-4"
+                        />
                       </div>
-                      <ButtonSkill>BHT-Berlin</ButtonSkill>
+                      {/* JOB DATE */}
+                      <div>
+                        <Text
+                          normalText="2015 - 2024"
+                          normalTextSize="text-lg"
+                          normalTextFont="font-semibold"
+                          normalTextPadding="p-4"
+                          normalTextPosition="text-center"
+                        />
+                      </div>
+                      {/* JOB COMPANY */}
+                      <div className="flex justify-center">
+                        <div className="inline-block bg-white rounded-full">
+                          <Image
+                            src={logoBHT}
+                            alt="BHT-Berlin"
+                            width={200}
+                            height={200}
+                          />
+                        </div>
+                      </div>
                     </div>
                   </FrameEffect>
                   {/* CENTER */}
