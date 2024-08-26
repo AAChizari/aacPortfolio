@@ -24,7 +24,11 @@ const config: Config = {
       md: "768px",
       lg: "1200px",
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        aacFont: ['aacFont', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 };
