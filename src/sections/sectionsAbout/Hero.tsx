@@ -219,7 +219,7 @@ export const AboutPage = () => {
                 </div>
               </motion.div>
               {/* SKILL LIST */}
-              <div className="flex flex-col">
+              <div className="flex flex-col -z-10">
                 {Object.entries(skillCategories).map(([category, skills]) => (
                   <div key={category} className="flex flex-col items-center">
                     <Text

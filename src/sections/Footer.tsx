@@ -1,7 +1,7 @@
 import Logo from "@/assets/logo1.svg";
-import XSocial from "@/assets/social-x.svg";
-import InstaSocial from "@/assets/social-instagram.svg";
-import YTSocial from "@/assets/social-youtube.svg";
+import Xing from "@/assets/socials/social-xing.svg";
+import Linkedin from "@/assets/socials/social-linkedin.svg";
+import Github from "@/assets/socials/social-github.svg";
 
 export const Footer = () => {
   return (
@@ -21,9 +21,15 @@ export const Footer = () => {
             </a>
           </nav>
           <div className="flex gap-5 lg:flex-1 lg:justify-end">
-            <XSocial className="text-white/70 hover:text-white transition" />
-            <InstaSocial className="text-white/70 hover:text-white transition" />
-            <YTSocial className="text-white/70 hover:text-white transition" />
+          <a href="https://www.linkedin.com/in/amir-chizari-2047192a7/" target="_blank" rel="noopener noreferrer">
+              <Linkedin className="text-white/70 hover:text-white transition" />
+            </a>
+            <a href="https://www.xing.com/profile/Amir_Chizari061776/web_profiles?expandNeffi=true" target="_blank" rel="noopener noreferrer">
+              <Xing className="text-white/70 hover:text-white transition" />
+            </a>
+            <a href="https://github.com/AAChizari" target="_blank" rel="noopener noreferrer">
+              <Github className="text-white/70 hover:text-white transition" />
+            </a>
           </div>
         </div>
       </div>
