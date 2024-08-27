@@ -3,22 +3,34 @@ export const Text = ({
   colorTitle,
   description,
   normalText,
-  titleSize = 'text-3xl md:text-5xl',
-  titleFont = 'font-serif',
-  colorTitleSize = 'text-lg',
-  colorTitleFont = 'font-semibold',
-  descriptionSize = 'md:text-lg lg:text-xl',
-  descriptionFont = 'font-sans',
-  normalTextSize = 'text-base',
-  normalTextFont = 'font-sans',
-  titlePosition = '',
-  colorTitlePosition = '',
-  descriptionPosition = '',
-  normalTextPosition = '',
-  titlePadding = '',
-  colorTitlePadding = '',
-  descriptionPadding = '',
-  normalTextPadding = '',
+  titleSize = "text-3xl md:text-5xl",
+  titleFont = "font-serif",
+  colorTitleSize = "text-lg",
+  colorTitleFont = "font-semibold",
+  descriptionSize = "md:text-lg lg:text-xl",
+  descriptionFont = "font-sans",
+  normalTextSize = "text-base",
+  normalTextFont = "font-sans",
+  titlePosition = "",
+  colorTitlePosition = "",
+  descriptionPosition = "",
+  normalTextPosition = "",
+  titlePadding = "",
+  colorTitlePadding = "",
+  descriptionPadding = "",
+  normalTextPadding = "",
+  titleMarginTop = "mt-4",
+  titleMarginBottom = "",
+  colorTitleMarginTop = "mt-4",
+  colorTitleMarginBottom = "",
+  descriptionMarginTop = "mt-4",
+  descriptionMarginBottom = "",
+  normalTextMarginTop = "mt-4",
+  normalTextMarginBottom = "",
+  titleExtra = "",
+  colorTitleExtra = "",
+  descriptionExtra = "",
+  normalTextExtra = "",
 }: {
   title?: string;
   colorTitle?: string;
@@ -40,26 +52,46 @@ export const Text = ({
   colorTitlePadding?: string;
   descriptionPadding?: string;
   normalTextPadding?: string;
+  titleMarginTop?: string;
+  titleMarginBottom?: string;
+  colorTitleMarginTop?: string;
+  colorTitleMarginBottom?: string;
+  descriptionMarginTop?: string;
+  descriptionMarginBottom?: string;
+  normalTextMarginTop?: string;
+  normalTextMarginBottom?: string;
+  titleExtra?: string;
+  colorTitleExtra?: string;
+  descriptionExtra?: string;
+  normalTextExtra?: string;
 }) => {
   return (
     <>
       {colorTitle && (
-        <p className={`mt-4 tracking-wide bg-gradient-to-r from-[#6ee7b7] to-[#009999] bg-clip-text text-transparent ${colorTitleSize} ${colorTitleFont} ${colorTitlePosition} ${colorTitlePadding}`}>
+        <p
+          className={`tracking-wide bg-gradient-to-r from-[#6ee7b7] to-[#009999] bg-clip-text text-transparent ${colorTitleSize} ${colorTitleFont} ${colorTitlePosition} ${colorTitlePadding} ${colorTitleMarginTop} ${colorTitleMarginBottom} ${colorTitleExtra}`}
+        >
           {colorTitle}
         </p>
       )}
       {title && (
-        <h2 className={`mt-4 ${titleSize} ${titleFont} ${titlePosition} ${titlePadding}`}>
+        <h2
+          className={`${titleSize} ${titleFont} ${titlePosition} ${titlePadding} ${titleMarginTop} ${titleMarginBottom} ${titleExtra}`}
+        >
           {title}
         </h2>
       )}
       {description && (
-        <p className={`text-white/60 mt-4 ${descriptionSize} ${descriptionFont} ${descriptionPosition} ${descriptionPadding}`}>
+        <p
+          className={`text-white/60 ${descriptionPosition} ${descriptionSize} ${descriptionFont} ${descriptionPadding} ${descriptionMarginTop} ${descriptionMarginBottom} ${descriptionExtra}`}
+        >
           {description}
         </p>
       )}
       {normalText && (
-        <p className={`mt-4 ${normalTextSize} ${normalTextFont} ${normalTextPosition} ${normalTextPadding}`}>
+        <p
+          className={`${normalTextSize} ${normalTextFont} ${normalTextPosition} ${normalTextPadding} ${normalTextMarginTop} ${normalTextMarginBottom} ${normalTextExtra}`}
+        >
           {normalText}
         </p>
       )}

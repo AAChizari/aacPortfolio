@@ -10,7 +10,8 @@ Text überall verwenden
 ### LOGO
 EIGENES LOGO 
 
-
+###
+<Text> so gestallten das sie per default schon aussehen hat aber mann mittels className anpassungen vornehmen kann
 
 
 
@@ -40,3 +41,43 @@ Erstellung (Adobe, Markdown, LaTex, PDF) und Herstellung von Dokumentationen
 
 
 
+<motion.div
+                  className="mt-4 flex flex-wrap gap-2"
+                  initial={{ x: "-300px" }}
+                  animate={isSkillRefInView ? { x: 0 } : {}}
+                  transition={{
+                  }}
+                >
+                  {[
+                    "Kotlin",
+                    "C",
+                    "JavaScript",
+                    "TypeScript",
+                    "CSS",
+                    "Windows",
+                    "Linux",
+                    "Firebase",
+                    "NOSQL",
+                    "SQL",
+                    "React.js",
+                    "Next.js",
+                    "SCSS",
+                    "Tailwind CSS",
+                    "Framer Motion",
+                    "Git",
+                    "Docker",
+                    "Ansible",
+                    "Cloud Engineering",
+                    "starUML",
+                    "Fusion 360",
+                    "stable diffusion",
+                    "Adobe Photoshop",
+                    "Adobe Premiere Pro",
+                    "Figma",
+                    "MS Office",
+                    "Latex",
+                    "Markdown",
+                  ].map((skill) => (
+                    <ButtonSkill key={skill}>{skill}</ButtonSkill>
+                  ))}
+                </motion.div>

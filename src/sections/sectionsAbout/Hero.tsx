@@ -12,7 +12,77 @@ import ProfileImage from "@/assets/aac-profileMoji.png";
 import IOAnalytica from "@/assets/logoIOanalytica.png";
 import logoBHT from "@/assets/logoBHT.png";
 
-import chromIcon from "@/assets/iconSkills/chrom.png";
+// Importieren Sie alle Skill-Icons
+import androidStudioIcon from "@/assets/iconSkills/androidStudio.png";
+import cLogoIcon from "@/assets/iconSkills/C_Logo.png";
+import cPlusPlusIcon from "@/assets/iconSkills/c++.png";
+import css3Icon from "@/assets/iconSkills/css3.png";
+import dockerIcon from "@/assets/iconSkills/docker.png";
+import firebaseIcon from "@/assets/iconSkills/firebase.png";
+import framerMotionIcon from "@/assets/iconSkills/framerMotion.png";
+import fusion360Icon from "@/assets/iconSkills/fusion360.png";
+import gitIcon from "@/assets/iconSkills/Git.png";
+import githubIcon from "@/assets/iconSkills/github.png";
+import jsIcon from "@/assets/iconSkills/js.png";
+import kotlinIcon from "@/assets/iconSkills/kotlin.png";
+import linuxIcon from "@/assets/iconSkills/linux.png";
+import macOSIcon from "@/assets/iconSkills/macOS.png";
+import markdownIcon from "@/assets/iconSkills/markdown.png";
+import msOfficeIcon from "@/assets/iconSkills/ms-office.png";
+import nextIcon from "@/assets/iconSkills/next.png";
+import overleafIcon from "@/assets/iconSkills/overleaf.png";
+import photoshopIcon from "@/assets/iconSkills/photoshop.png";
+import reactIcon from "@/assets/iconSkills/react.png";
+import starUmlIcon from "@/assets/iconSkills/Staruml.png";
+import tailwindIcon from "@/assets/iconSkills/Tailwind.png";
+import tsIcon from "@/assets/iconSkills/ts.png";
+import vsIcon from "@/assets/iconSkills/vs.png";
+import windowsIcon from "@/assets/iconSkills/windows.png";
+
+// Definieren Sie ein Array mit den Skills und ihren zugehörigen Icons
+const skillCategories = {
+  entwicklungsumgebungen: [
+    { name: "Android Studio", icon: androidStudioIcon },
+    { name: "Visual Studio", icon: vsIcon },
+  ],
+  programmiersprachen: [
+    { name: "Kotlin", icon: kotlinIcon },
+    { name: "C", icon: cLogoIcon },
+    { name: "C++", icon: cPlusPlusIcon },
+    { name: "JavaScript", icon: jsIcon },
+    { name: "TypeScript", icon: tsIcon },
+  ],
+  betriebssysteme: [
+    { name: "Windows", icon: windowsIcon },
+    { name: "Linux", icon: linuxIcon },
+    { name: "macOS", icon: macOSIcon },
+  ],
+  webTechnologien: [
+    { name: "CSS", icon: css3Icon },
+    { name: "React.js", icon: reactIcon },
+    { name: "Next.js", icon: nextIcon },
+    { name: "Tailwind CSS", icon: tailwindIcon },
+    { name: "Framer Motion", icon: framerMotionIcon },
+  ],
+  versionskontrolle: [
+    { name: "GitHub", icon: githubIcon },
+    { name: "Git", icon: gitIcon },
+  ],
+  cloudUndInfrastruktur: [
+    { name: "Firebase", icon: firebaseIcon },
+    { name: "Docker", icon: dockerIcon },
+  ],
+  designUndModellierung: [
+    { name: "StarUML", icon: starUmlIcon },
+    { name: "Fusion 360", icon: fusion360Icon },
+    { name: "Adobe Photoshop", icon: photoshopIcon },
+  ],
+  produktivitaetstools: [
+    { name: "MS Office", icon: msOfficeIcon },
+    { name: "Overleaf", icon: overleafIcon },
+    { name: "Markdown", icon: markdownIcon },
+  ],
+};
 
 const AboutPage = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -128,60 +198,68 @@ const AboutPage = () => {
             {/* SKILLS CONTAINER */}
             <div className="flex flex-col gap-8 justify-center" ref={skillRef}>
               {/* SKILL TITLE */}
-              <motion.h1
+              <motion.div
                 initial={{ x: "-300px" }}
                 animate={isSkillRefInView ? { x: 0 } : {}}
                 transition={{
                   delay: 0.2,
                 }}
-                className="font-serif text-3xl md:text-6xl md:leading-none tracking-tighter bg-white bg-[radial-gradient(100%_100%_at_top_left,white,white,rgba(0,153,153,0.5))] text-transparent bg-clip-text"
               >
-                SKILLS
-              </motion.h1>
+                <div>
+                  <h1 className="text-center font-serif text-6xl md:text-6xl md:leading-none tracking-tighter bg-white bg-[radial-gradient(100%_100%_at_top_left,white,white,rgba(0,153,153,0.5))] text-transparent bg-clip-text">
+                    FÄHIGKEITEN
+                  </h1>
+                  <Text
+                    description="Technologien und Tools, die ich bisher verwendet habe, um zu entwickeln."
+                    descriptionSize="text-lg"
+                    descriptionFont="font-semibold"
+                    descriptionPadding="p-4"
+                    descriptionPosition="text-center"
+                  />
+                </div>
+              </motion.div>
               {/* SKILL LIST */}
-              <div>
-                <motion.div
-                  className="mt-4 flex flex-wrap gap-2"
-                  initial={{ x: "-300px" }}
-                  animate={isSkillRefInView ? { x: 0 } : {}}
-                  transition={{
-                  }}
-                >
-                  {[
-                    "Kotlin",
-                    "C",
-                    "JavaScript",
-                    "TypeScript",
-                    "CSS",
-                    "Windows",
-                    "Linux",
-                    "Firebase",
-                    "NOSQL",
-                    "SQL",
-                    "React.js",
-                    "Next.js",
-                    "SCSS",
-                    "Tailwind CSS",
-                    "Framer Motion",
-                    "Git",
-                    "Docker",
-                    "Ansible",
-                    "Cloud Engineering",
-                    "starUML",
-                    "Fusion 360",
-                    "stable diffusion",
-                    "Adobe Photoshop",
-                    "Adobe Premiere Pro",
-                    "Figma",
-                    "MS Office",
-                    "Latex",
-                    "Markdown",
-                  ].map((skill) => (
-                    <ButtonSkill key={skill}>{skill}</ButtonSkill>
-                  ))}
-                </motion.div>
+              <div className="flex flex-col">
+                {Object.entries(skillCategories).map(([category, skills]) => (
+                  <div key={category} className="flex flex-col items-center">
+                    <Text
+                      colorTitle={category}
+                      colorTitleSize="text-xl md:text-2xl lg:text-3xl"
+                      colorTitleFont="font-bold"
+                      colorTitlePosition="text-center"
+                      colorTitleMarginBottom="mb-4"
+                      colorTitleMarginTop="mt-8"
+                      colorTitleExtra="uppercase"
+                    />
+                    <div className="flex flex-wrap justify-center gap-2">
+                      {skills.map((skill) => (
+                        <FrameEffect
+                          key={skill.name}
+                          className=""
+                          borderColor="#009999"
+                          shadowColor="#009999"
+                          backgroundColor="#001f1f"
+                          padding="p-3"
+                          borderRadius="rounded-lg"
+                          shadowIntensity={5}
+                        >
+                          <div className="flex items-center gap-3">
+                            <Image
+                              src={skill.icon}
+                              alt={skill.name}
+                              width={60}
+                              height={60}
+                            />
+                            <span className="text-sm font-semibold">
+                              {skill.name}
+                            </span>
+                          </div>
+                        </FrameEffect>
+                      ))}
+                    </div>
+                  </div>
+                ))}
               </div>
-
               {/* SKILL SCROLL SVG */}
               <motion.svg
                 initial={{ opacity: 0.2, y: 0 }}
@@ -216,14 +294,19 @@ const AboutPage = () => {
               ref={experienceRef}
             >
               {/* EXPERIENCE TITLE */}
-              <motion.h1
+              <motion.div
                 initial={{ x: "-300px" }}
-                animate={isExperienceRefInView ? { x: "0" } : {}}
-                transition={{ delay: 0.2 }}
-                className=" py-2 font-serif text-3xl md:text-6xl md:leading-none tracking-tighter bg-white bg-[radial-gradient(100%_100%_at_top_left,white,white,rgba(0,153,153,0.5))] text-transparent bg-clip-text"
+                animate={isSkillRefInView ? { x: 0 } : {}}
+                transition={{
+                  delay: 0.2,
+                }}
               >
-                LAUFBAHN
-              </motion.h1>
+                <div>
+                  <h1 className="text-center font-serif text-6xl md:text-6xl md:leading-none tracking-tighter bg-white bg-[radial-gradient(100%_100%_at_top_left,white,white,rgba(0,153,153,0.5))] text-transparent bg-clip-text">
+                    LAUFBAHN
+                  </h1>
+                </div>
+              </motion.div>
               {/* EXPERIENCE LIST */}
               <motion.div
                 initial={{ x: "-300px" }}
