@@ -206,7 +206,7 @@ export const AboutPage = () => {
                 }}
               >
                 <div>
-                  <h1 className="text-center font-serif text-6xl md:text-6xl md:leading-none tracking-tighter bg-white bg-[radial-gradient(100%_100%_at_top_left,white,white,rgba(0,153,153,0.5))] text-transparent bg-clip-text">
+                  <h1 className="text-center font-serif text-4xl md:text-6xl md:leading-none tracking-tighter bg-white bg-[radial-gradient(100%_100%_at_top_left,white,white,rgba(0,153,153,0.5))] text-transparent bg-clip-text">
                     FÄHIGKEITEN
                   </h1>
                   <Text
@@ -302,7 +302,7 @@ export const AboutPage = () => {
                 }}
               >
                 <div>
-                  <h1 className="text-center font-serif text-6xl md:text-6xl md:leading-none tracking-tighter bg-white bg-[radial-gradient(100%_100%_at_top_left,white,white,rgba(0,153,153,0.5))] text-transparent bg-clip-text">
+                  <h1 className="text-center font-serif text-4xl md:text-6xl md:leading-none tracking-tighter bg-white bg-[radial-gradient(100%_100%_at_top_left,white,white,rgba(0,153,153,0.5))] text-transparent bg-clip-text">
                     LAUFBAHN
                   </h1>
                 </div>
