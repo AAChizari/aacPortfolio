@@ -140,40 +140,46 @@ const AboutPage = () => {
               </motion.h1>
               {/* SKILL LIST */}
               <div>
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {[
-                      "Kotlin",
-                      "C",
-                      "JavaScript",
-                      "TypeScript",
-                      "CSS",
-                      "Windows",
-                      "Linux",
-                      "Firebase",
-                      "NOSQL",
-                      "SQL",
-                      "React.js",
-                      "Next.js",
-                      "SCSS",
-                      "Tailwind CSS",
-                      "Framer Motion",
-                      "Git",
-                      "Docker",
-                      "Ansible",
-                      "Cloud Engineering",
-                      "starUML",
-                      "Fusion 360",
-                      "stable diffusion",
-                      "Adobe Photoshop",
-                      "Adobe Premiere Pro",
-                      "Figma",
-                      "MS Office",
-                      "Latex",
-                      "Markdown",
-                    ].map((skill) => (
-                      <ButtonSkill key={skill}>{skill}</ButtonSkill>
-                    ))}
-                  </div>
+                <motion.div
+                  className="mt-4 flex flex-wrap gap-2"
+                  initial={{ x: "-300px" }}
+                  animate={isSkillRefInView ? { x: 0 } : {}}
+                  transition={{
+                  }}
+                >
+                  {[
+                    "Kotlin",
+                    "C",
+                    "JavaScript",
+                    "TypeScript",
+                    "CSS",
+                    "Windows",
+                    "Linux",
+                    "Firebase",
+                    "NOSQL",
+                    "SQL",
+                    "React.js",
+                    "Next.js",
+                    "SCSS",
+                    "Tailwind CSS",
+                    "Framer Motion",
+                    "Git",
+                    "Docker",
+                    "Ansible",
+                    "Cloud Engineering",
+                    "starUML",
+                    "Fusion 360",
+                    "stable diffusion",
+                    "Adobe Photoshop",
+                    "Adobe Premiere Pro",
+                    "Figma",
+                    "MS Office",
+                    "Latex",
+                    "Markdown",
+                  ].map((skill) => (
+                    <ButtonSkill key={skill}>{skill}</ButtonSkill>
+                  ))}
+                </motion.div>
               </div>
 
               {/* SKILL SCROLL SVG */}
