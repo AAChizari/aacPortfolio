@@ -84,7 +84,7 @@ const skillCategories = {
   ],
 };
 
-const AboutPage = () => {
+export const AboutPage = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,

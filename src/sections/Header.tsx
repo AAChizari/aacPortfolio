@@ -1,12 +1,20 @@
 "use client";
+
 import Link from "next/link";
 import LogoIcon from "@/assets/logo1.svg";
 import MenuIcon from "@/assets/icon-menu.svg";
-import { Button } from "@/components/Button";
 import { useState } from "react";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsOpen(false);
+  };
 
   return (
     <header className="py-4 border-b border-white/15 md:border-none sticky top-0 z-10">
@@ -27,12 +35,12 @@ export const Header = () => {
               >
                 Startseite
               </Link>
-              <Link
-                href="/about"
+              <button
+                onClick={() => scrollToSection('about')}
                 className="text-white/70 hover:text-white transition"
               >
                 Über mich
-              </Link>
+              </button>
               <Link
                 href="/projects"
                 className="text-white/70 hover:text-white transition"
@@ -60,13 +68,12 @@ export const Header = () => {
               >
                 Startseite
               </Link>
-              <Link
-                href="/about"
+              <button
+                onClick={() => scrollToSection('about')}
                 className="py-2 text-xl font-bold text-white/70 hover:text-white transition"
-                onClick={() => setIsOpen(false)}
               >
                 Über mich
-              </Link>
+              </button>
               <Link
                 href="/projects"
                 className="py-2 text-xl font-bold text-white/70 hover:text-white transition"
