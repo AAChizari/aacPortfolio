@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import Link from "next/link";
 import LogoIcon from "@/assets/logo2.svg";
 
@@ -10,6 +11,22 @@ export const Header = () => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.slice(1);
+      if (hash) {
+        scrollToSection(hash);
+      }
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+    handleHashChange(); // Beim ersten Laden prüfen
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, []);
 
   return (
     <header className="py-4 border-b border-white/15 md:border-none sticky top-0 z-10">
@@ -24,24 +41,15 @@ export const Header = () => {
           </div>
           <div className="hidden md:block">
             <nav className="flex gap-8 text-sm">
-              <button
-                onClick={() => scrollToSection('home')}
-                className="text-white/70 hover:text-white transition"
-              >
+              <Link href="#home" onClick={(e) => { e.preventDefault(); scrollToSection('home'); }} className="text-white/70 hover:text-white transition">
                 Startseite
-              </button>
-              <button
-                onClick={() => scrollToSection('about')}
-                className="text-white/70 hover:text-white transition"
-              >
+              </Link>
+              <Link href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }} className="text-white/70 hover:text-white transition">
                 Über mich
-              </button>
-              <button
-                onClick={() => scrollToSection('projects')}
-                className="text-white/70 hover:text-white transition"
-              >
+              </Link>
+              <Link href="#projects" onClick={(e) => { e.preventDefault(); scrollToSection('projects'); }} className="text-white/70 hover:text-white transition">
                 Projekte
-              </button>
+              </Link>
             </nav>
           </div>
         </div>

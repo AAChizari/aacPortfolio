@@ -78,7 +78,7 @@ export const Projects = () => {
           {portfolioProjects.map((project, index) => (
             <Card
               key={index}
-              className="bg-gray-800 px-8 pt-9 pb-0 md:px-12 md:pt-12 lg:px-16 lg:pt-16 rounded-3xl overflow-hidden sticky top-24"
+              className="bg-zinc-800 px-8 pt-9 pb-0 md:px-12 md:pt-12 lg:px-16 lg:pt-16 rounded-3xl overflow-hidden sticky top-24"
               style={{ top: `calc(84px + ${index * 40}px)` }}
             >
               <div className="lg:flex lg:items-start lg:gap-12">

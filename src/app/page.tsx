@@ -15,12 +15,18 @@ export default function Home() {
   return (
     <>
       <Header />
-      <Hero />
+      <section id="home">
+        <Hero />
+      </section>
       <Scroll />
-      <Projects />
+      <section id="projects">
+        <Projects />
+      </section>
       <Tape />
       <Skills />
-      <AboutPage />
+      <section id="about">
+        <AboutPage />
+      </section>
       <CallToAction />
       <Footer />
     </>
