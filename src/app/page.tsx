@@ -5,24 +5,25 @@ import { LogoTicker } from "@/sections/LogoTicker";
 import { CallToAction } from "@/sections/CallToAction";
 import { Comments } from "@/sections/Comments";
 import { Biography } from "@/sections/Biograpy";
-import { AboutPage } from "@/sections/sectionsAbout/Hero";
+import { AboutPage } from "@/sections/AboutPage";
 import { Scroll } from "@/sections/Scroll";
 import { Skills } from "@/sections/Skills";
+import { Contact } from "@/sections/sectionsAbout/Contact";
+import { Projects } from "@/sections/Projects";
+import { Tape } from "@/sections/Tape";
 
 export default function Home() {
   return (
     <>
       <Header />
       <Hero />
-      <Biography />
       <Scroll />
-      <AboutPage />
-      <Scroll />
+      <Projects />
+      <Tape />
       <Skills />
-      <Scroll />
+      <AboutPage />
       <CallToAction />
       <Footer />
-
     </>
-   );
+  );
 }

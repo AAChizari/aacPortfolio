@@ -10,6 +10,8 @@ import {
   useMotionValue,
 } from "framer-motion";
 import { useRef, RefObject, useEffect, useState } from "react";
+import { ButtonSkill } from "@/components/ButtonSkill";
+import { Text } from "@/components/Text";
 
 const useRelativeMousePos = (to: RefObject<HTMLElement>) => {
   const mouseX = useMotionValue(0);
@@ -60,11 +62,11 @@ export const CallToAction = () => {
   };
 
   return (
-    <section className="py-20 md:py-24" ref={sectionRef}>
+    <section className="py-24" ref={sectionRef}>
       <div className="container">
         <motion.div
           ref={borderedDivRef}
-          className="border border-[#009999]/15 py-24 rounded-xl overflow-hidden relative group"
+          className="border border-[#EC6F00]/15 py-24 rounded-xl overflow-hidden relative group"
           animate={{
             backgroundPositionX: starsBg.width,
           }}
@@ -79,37 +81,35 @@ export const CallToAction = () => {
           }}
         >
           <div
-            className="absolute inset-0 bg-[#009999] bg-opacity-30 bg-blend-overlay [mask-image:radial-gradient(50%_50%_at_50%_35%,black,transparent)] group-hover:opacity-0 transition duration-700"
+            className="absolute inset-0 bg-[#EC6F00] bg-opacity-30 bg-blend-overlay [mask-image:radial-gradient(50%_50%_at_50%_35%,black,transparent)] group-hover:opacity-0 transition duration-700"
             style={{
               backgroundImage: `url(${gridlines.src})`,
             }}
           ></div>
           <motion.div
-            className="absolute inset-0 bg-[#009999] bg-opacity-30 bg-blend-overlay opacity-0 group-hover:opacity-100 transition duration-700"
+            className="absolute inset-0 bg-[#EC6F00] bg-opacity-30 bg-blend-overlay opacity-0 group-hover:opacity-100 transition duration-700"
             style={{
               maskImage,
               backgroundImage: `url(${gridlines.src})`,
             }}
           ></motion.div>
           <div className="relative">
-            <h2 className="text-5xl md:text-6xl max-w-sm mx-auto tracking-tighter text-center font-medium">
-              Page in progress.
-            </h2>
-            <p className="text-center text-lg md:text-xl max-w-xs mx-auto text-[#009999]/70 px-4 mt-5 tracking-tighter">
-              Page in progress.
-            </p>
+            <Text 
+            title="Contact Me"
+            className="text-center"
+            />
+            <Text
+            colorTitle="Page in Progress"
+            className="text-center"
+            />
+
             <div className="flex justify-center mt-8">
-              <button
+              <ButtonSkill    
                 onClick={copyEmailToClipboard}
-                className="relative py-2 px-3 rounded-lg font-medium text-sm bg-gradient-to-b from-[#0099996b] to-[#009999] shadow-[0px0px_12px#8c45ff]"
+                className="font-extrabold "
               >
-                <div className="absolute inset-0">
-                  <div className="rounded-lg border border-[#009999] absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent)]"></div>
-                  <div className="rounded-lg border absolute inset-0 border-[#009999] [mask-image:linear-gradient(to_top,black,transparent)]"></div>
-                  <div className="absolute inset-0 shadow-[0_0_10px_#009999_inset] rounded-lg"></div>
-                </div>
                 {isCopied ? "E-Mail kopiert!" : "Contact Me"}{" "}
-              </button>
+              </ButtonSkill>
             </div>
           </div>
         </motion.div>

@@ -10,8 +10,9 @@ const config: Config = {
     container: {
       center: true,
       padding: {
-        DEFAULT: "20px",
-        lg: "80px",
+        sm: "1.5rem",
+        md: "2rem",
+        lg: "5.5rem",
       },
       screens: {
         sm: "375px",
@@ -26,7 +27,46 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        aacFont: ['aacFont', 'sans-serif'],
+        aacFont: ["aacFont", "sans-serif"],
+      },
+      animation: {
+        "ping-large": "ping-large 1s ease-in-out infinite",
+        "move-left": "move-left 1s linear infinite",
+        "move-right": "move-right 1s linear infinite",
+        'slide-left': 'slideLeft 0.5s ease-out',
+        'slide-right': 'slideRight 0.5s ease-out',
+      },
+      keyframes: {
+        "ping-large": {
+          "75%, 100%": {
+            transform: "scale(3)",
+            opacity: "0",
+          },
+        },
+        "move-left": {
+          "0%": {
+            transform: "translateX(0)",
+          },
+          "100%": {
+            transform: "translateX(-50%)",
+          },
+        },
+        "move-right": {
+          "0%": {
+            transform: "translateX(-50%)",
+          },
+          "100%": {
+            transform: "translateX(0)",
+          },
+        },
+        slideLeft: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+        slideRight: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
       },
     },
   },

@@ -44,7 +44,7 @@ export const Hero = () => {
         duration: 120,
       }}
     >
-      <div className="absolute inset-0 bg-[radial-gradient(75%_75%_at_center_center,rgba(0,153,153,0.08)_15%,rgba(0,153,153,0.2)_78%,transparent)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(75%_75%_at_center_center,rgba(236,111,0,0.08)_15%,rgba(236,111,0,0.2)_78%,transparent)]"></div>
 
       {/* start ring 1 */}
       <motion.div
@@ -121,7 +121,7 @@ export const Hero = () => {
           />
         </div>
         {/* end image */}
-        <h1 className=" font-serif text-3xl md:text-6xl md:leading-none tracking-tighter bg-white bg-[radial-gradient(100%_100%_at_top_left,white,white,rgba(0,153,153,0.5))] text-transparent bg-clip-text text-center">
+        <h1 className=" font-serif font-extrabold text-3xl md:text-6xl md:leading-none tracking-tighter bg-white bg-clip-text text-center">
           Amir Aschkan Chizari
         </h1>
         <p className=" text-lg md:text-xl text-white/70 mt-4 text-center max-w-lg mx-auto">
@@ -129,7 +129,7 @@ export const Hero = () => {
         </p>
         <div className="flex justify-center mt-5">
           <Link href="/projects">
-            <ButtonSkill>👋 Projekte erkunden</ButtonSkill>
+            <ButtonSkill>Projekte erkunden 👋</ButtonSkill>
           </Link>
         </div>
       </div>

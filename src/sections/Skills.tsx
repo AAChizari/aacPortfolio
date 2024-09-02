@@ -2,9 +2,18 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Text } from "@/components/Text";
-import { FrameEffect } from "@/components/FrameEffect";
+import bacover from "@/assets/abschlussarbeitCover.png";
+import ChevronRightIcon from "@/assets/socials/social-x.svg"; // Importieren Sie die Icons
+import { TechIcon } from "@/components/TechIcon";
+import { Card } from "@/components/Card";
+import { CardHeader } from "@/components/CardHeader";
+import { ToolboxItem } from "@/components/ToolboxItem";
+
+import mapImage from "@/assets/map.jpeg";
+import smileMemoji from "@/assets/aac-profileSmileMoji.png";
+import LogoIcon from "@/assets/logo.svg";
 
 import androidStudioIcon from "@/assets/iconSkills/androidStudio.png";
 import cLogoIcon from "@/assets/iconSkills/C_Logo.png";
@@ -32,141 +41,142 @@ import tsIcon from "@/assets/iconSkills/ts.png";
 import vsIcon from "@/assets/iconSkills/vs.png";
 import windowsIcon from "@/assets/iconSkills/windows.png";
 
-export const skillCategories = {
-  entwicklungsumgebungen: [
-    { name: "Android Studio", icon: androidStudioIcon, level: 70 },
-    { name: "Visual Studio", icon: vsIcon, level: 80 },
-  ],
-  programmiersprachen: [
-    { name: "Kotlin", icon: kotlinIcon, level: 60 },
-    { name: "C", icon: cLogoIcon, level: 90 },
-    { name: "C++", icon: cPlusPlusIcon, level: 70 },
-    { name: "JavaScript", icon: jsIcon, level: 80 },
-    { name: "TypeScript", icon: tsIcon, level: 70 },
-  ],
-  betriebssysteme: [
-    { name: "Windows", icon: windowsIcon, level: 90 },
-    { name: "Linux", icon: linuxIcon, level: 80 },
-    { name: "macOS", icon: macOSIcon, level: 70 },
-  ],
-  webTechnologien: [
-    { name: "CSS", icon: css3Icon, level: 90 },
-    { name: "React.js", icon: reactIcon, level: 80 },
-    { name: "Next.js", icon: nextIcon, level: 70 },
-    { name: "Tailwind CSS", icon: tailwindIcon, level: 80 },
-    { name: "Framer Motion", icon: framerMotionIcon, level: 70 },
-  ],
-  versionskontrolle: [
-    { name: "GitHub", icon: githubIcon, level: 90 },
-    { name: "Git", icon: gitIcon, level: 80 },
-  ],
-  cloudUndInfrastruktur: [
-    { name: "Firebase", icon: firebaseIcon, level: 90 },
-    { name: "Docker", icon: dockerIcon, level: 80 },
-  ],
-  designUndModellierung: [
-    { name: "StarUML", icon: starUmlIcon, level: 80 },
-    { name: "Fusion 360", icon: fusion360Icon, level: 80 },
-    { name: "Adobe Photoshop", icon: photoshopIcon, level: 90 },
-  ],
-  produktivitaetstools: [
-    { name: "MS Office", icon: msOfficeIcon, level: 90 },
-    { name: "Overleaf", icon: overleafIcon, level: 80 },
-    { name: "Markdown", icon: markdownIcon, level: 90 },
+export const SkillItem = {
+  skills: [
+    { name: "Android Studio", iconType: androidStudioIcon },
+    { name: "Visual Studio", iconType: vsIcon },
+    { name: "Kotlin", iconType: kotlinIcon },
+    { name: "C", iconType: cLogoIcon },
+    { name: "C++", iconType: cPlusPlusIcon },
+    { name: "JavaScript", iconType: jsIcon },
+    { name: "TypeScript", iconType: tsIcon },
+    { name: "Windows", iconType: windowsIcon },
+    { name: "Linux", iconType: linuxIcon },
+    { name: "macOS", iconType: macOSIcon },
+    { name: "CSS", iconType: css3Icon },
+    { name: "React.js", iconType: reactIcon },
+    { name: "Next.js", iconType: nextIcon },
+    { name: "Tailwind CSS", iconType: tailwindIcon },
+    { name: "Framer Motion", iconType: framerMotionIcon },
+    { name: "GitHub", iconType: githubIcon },
+    { name: "Git", iconType: gitIcon },
+    { name: "Firebase", iconType: firebaseIcon },
+    { name: "Docker", iconType: dockerIcon },
+    { name: "StarUML", iconType: starUmlIcon },
+    { name: "Fusion 360", iconType: fusion360Icon },
+    { name: "Adobe Photoshop", iconType: photoshopIcon },
+    { name: "MS Office", iconType: msOfficeIcon },
+    { name: "Overleaf", iconType: overleafIcon },
+    { name: "Markdown", iconType: markdownIcon },
   ],
 };
 
+const hobbies = [
+  { name: "digitalArt", emoji: "🎨", left: "5%", top: "5%" },
+  { name: "gaming", emoji: "🎮", left: "50%", top: "5%" },
+  { name: "reading", emoji: "📚", left: "10%", top: "35%" },
+  { name: "traveling", emoji: "🌍", left: "60%", top: "35%" },
+  { name: "sports", emoji: "🏋️‍♂️", left: "5%", top: "65%" },
+  { name: "music", emoji: "🎵", left: "45%", top: "70%" },
+];
+
 export const Skills = () => {
-  const [currentCategoryIndex, setCurrentCategoryIndex] = useState(0);
-  const categories = Object.keys(skillCategories);
-
-  const nextCategory = () => {
-    setCurrentCategoryIndex((prev) => (prev + 1) % categories.length);
-  };
-
-  const prevCategory = () => {
-    setCurrentCategoryIndex(
-      (prev) => (prev - 1 + categories.length) % categories.length
-    );
-  };
-
-  const currentCategory = categories[
-    currentCategoryIndex
-  ] as keyof typeof skillCategories;
-  const currentSkills = skillCategories[currentCategory];
+  const ConstraintRef = useRef(null);
 
   return (
-    <div className="container mt-24">
-      <div className="flex flex-col gap-8 justify-center mt-24">
-        <h1 className="text-center font-serif text-4xl md:text-6xl md:leading-none tracking-tighter bg-white bg-[radial-gradient(100%_100%_at_top_left,white,white,rgba(0,153,153,0.5))] text-transparent bg-clip-text">
-          SKILLS
-        </h1>
+    <div className="py-20 lg:py-28">
+      <div className="container">
+        <Text colorTitle="Über mich" className="text-center"/>
+        <Text title="Ein Einblick in meine Welt." className="text-center" />
         <Text
-          description="Technologien und Tools, die ich bisher verwendet habe, um zu entwickeln."
-          descriptionSize="text-lg"
-          descriptionFont="font-semibold"
-          descriptionPadding="p-4"
-          descriptionPosition="text-center"
+          description="Erfahren mehr über mich, was ich tue und was mich inspiriert."
+          className="text-center"
         />
-
-        <FrameEffect
-          className="relative w-full h-[500px]"
-          borderColor="#009999"
-          shadowColor="#009999"
-          backgroundColor="#001f1f"
-          padding="p-3"
-          borderRadius="rounded-lg"
-          shadowIntensity={5}
-        >
-          {/* Navigationspfeile */}
-          <button
-            onClick={prevCategory}
-            className="absolute top-2 left-2 text-white text-2xl"
-          >
-            ←
-          </button>
-          <button
-            onClick={nextCategory}
-            className="absolute top-2 right-2 text-white text-2xl"
-          >
-            →
-          </button>
-
-          {/* Kategorie-Titel */}
-          <Text
-            title={currentCategory.toUpperCase()}
-            titleSize="text-2xl"
-            titleFont="font-bold"
-            titlePadding="p-4"
-            titlePosition="text-center"
-          />
-          {/* Schwebende Logos */}
-          {currentSkills.map((skill) => (
-            <motion.div
-              key={skill.name}
-              className="absolute"
-              initial={{ x: Math.random() * 400, y: Math.random() * 400 }}
-              animate={{
-                x: Math.random() * 400,
-                y: Math.random() * 400,
-                transition: {
-                  duration: 20,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                  ease: "linear",
-                },
-              }}
-            >
-              <Image
-                src={skill.icon}
-                alt={skill.name}
-                width={skill.level}
-                height={skill.level}
-                className="hover:scale-110 transition-transform"
+        {/* acaReact Abschlussarbeit BOX */}
+        <div className="mt-20 flex flex-col gap-8">
+          {/* div Abschlussarbeit und Skills BOX */}
+          <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 gap-8">
+            <Card className="h-[320px] md:col-span-2 lg:col-span-1">
+              <CardHeader
+                title="acaReact"
+                description="meine Abschlussarbeit"
               />
-            </motion.div>
-          ))}
-        </FrameEffect>
+              <div className="w-40 mx-auto mt-2 md:mt-0">
+                <Image src={bacover} alt="Abschlussarbeit" />
+              </div>
+            </Card>
+            {/* meine Skills BOX */}
+            <Card className="h-[320px] md:col-span-3 lg:col-span-2">
+              <div>
+                <div>
+                  <CardHeader
+                    title="Meine Skills"
+                    description="Werkzeuge und Technologien mit denen ich arbeite"
+                    className=""
+                  />
+                </div>
+              </div>
+              <ToolboxItem
+                items={SkillItem.skills}
+                className=""
+                itemsWrapperClassName="animate-move-left [animation-duration:120s]"
+              />
+              <ToolboxItem
+                items={SkillItem.skills}
+                className="mt-6"
+                itemsWrapperClassName="animate-move-right [animation-duration:120s]"
+              />
+            </Card>
+          </div>
+          {/* div Hobbies und standort BOX */}
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
+            {/* meine Hobbies BOX */}
+            <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
+              <CardHeader
+                title="Außerhalb des Codens"
+                description="Meine anderen Interessen und Hobbies außerhalb des Codens"
+                className="px-6 py-6"
+              />
+              <div className="relative flex-1" ref={ConstraintRef}>
+                {hobbies.map((hobby) => (
+                  <motion.div
+                    key={hobby.name}
+                    className="inline-flex gap-2 px-6 bg-gradient-to-r from-[#FFB16D] to-[#EC6F00] rounded-full py-1.5 absolute"
+                    style={{
+                      left: hobby.left, 
+                      top: hobby.top,
+                    }}
+                    drag
+                    dragConstraints={ConstraintRef}
+                  >
+                    <span className="font-extrabold text-gray-950">
+                      {hobby.name}
+                    </span>
+                    <span>{hobby.emoji}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </Card>
+            {/* mein standort BOX */}
+            <Card className="h-[320px] p-0 flex flex-col md:col-span-2 lg:col-span-1">
+              <Image
+                src={mapImage}
+                alt="Map"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  rounded-full p-2 border border-gray-950/30 after:content-[''] after:absolute after:inset-0 after:-outline after:outline-2 after:outline-offset-2 after:outline-rounded-full after:outline-gray-950/30">
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#FFB16D] to-[#EC6F00] -z-20 animate-ping [animation-duration:2s]"></div>
+
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#FFB16D] to-[#EC6F00] -z-10"></div>
+                <Image
+                  src={smileMemoji}
+                  alt="Smile Memoji"
+                  className="size-20"
+                />
+              </div>
+            </Card>
+          </div>
+        </div>
       </div>
     </div>
   );
