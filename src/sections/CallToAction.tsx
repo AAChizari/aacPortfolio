@@ -9,7 +9,7 @@ import {
   useMotionTemplate,
   useMotionValue,
 } from "framer-motion";
-import { useRef, RefObject, useEffect, useState } from "react";
+import { useRef, RefObject, useEffect, useState, useCallback } from "react";
 import { ButtonSkill } from "@/components/ButtonSkill";
 import { Text } from "@/components/Text";
 
@@ -17,12 +17,12 @@ const useRelativeMousePos = (to: RefObject<HTMLElement>) => {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
-  const updateMousePosition = (event: MouseEvent) => {
+  const updateMousePosition = useCallback((event: MouseEvent) => {
     if (!to.current) return;
     const { top, left } = to.current.getBoundingClientRect();
     mouseX.set(event.x - left);
     mouseY.set(event.y - top);
-  };
+  }, [mouseX, mouseY]);
 
   useEffect(() => {
     window.addEventListener("mousemove", updateMousePosition);
