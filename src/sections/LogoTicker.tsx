@@ -8,6 +8,7 @@ import PulseLogo from "@/assets/logo-pulse.png";
 import echoLogo from "@/assets/logo-echo.png";
 import { log } from "console";
 import { motion } from "framer-motion";
+import Image from 'next/image';
 
 export const LogoTicker = () => {
   return (
@@ -42,7 +43,12 @@ export const LogoTicker = () => {
                 PulseLogo,
                 echoLogo,
               ].map((logo) => (
-                <img src={logo.src} key={logo.src} className="h-6 w-auto " />
+                <Image 
+                  src={logo.src} 
+                  alt="Logo Beschreibung" 
+                  width={100} 
+                  height={50} 
+                />
               ))}
             </motion.div>
           </div>

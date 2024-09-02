@@ -20,11 +20,7 @@ export const Biography = () => {
           />
         </div>
         {/* BIOGRAPHY TITLE */}
-        <Text
-          colorTitle="Biografie"
-          colorTitleSize="text-3xl md:text-3xl "
-          colorTitleFont="font-bold font-serif"
-        />
+        <Text colorTitle="Biografie" />
         {/* BIOGRAPHY DESC */}
         <Text
           title="Ich bin ein Absolvent der Technischen Informatik mit einem
@@ -34,14 +30,11 @@ export const Biography = () => {
         Dokumentationen verantwortlich. Meine Abschlussarbeit
         konzentrierte sich auf die Entwicklung einer
         Android-Applikation."
-          titleSize="text-lg md:text-2xl"
         ></Text>
         {/* BIOGRAPHY QUOTE */}
         <Text
           description="Die Technologie ist das Werkzeug, mit dem wir die Zukunft
         gestalten."
-          descriptionSize="text-lg md:text-2xl"
-          descriptionFont="font-sans"
         ></Text>
         {/* BIOGRAPHY SIGN SVG*/}
         <div className="self-end">
