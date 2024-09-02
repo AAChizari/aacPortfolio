@@ -19,10 +19,7 @@ export const Comments = () => {
   return (
     <div className="container">
       <FrameEffect>
-        <Text
-          title="What our clients say ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
-          titleSize="text-2xl"
-        />
+        <Text title="What our clients say ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos." />
       </FrameEffect>
     </div>
   );
