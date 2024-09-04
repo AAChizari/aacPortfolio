@@ -30,7 +30,7 @@ const portfolioProjects = [
       { title: "Entwicklung einer Web Applikation." },
       { title: "Ermittlung der fortlaufenden chestcycle." },
     ],
-    link: "/squadTracker",
+    link: "https://aachizari.github.io/SquadTracker/",
     image: sbDisplay,
   },
   {
