@@ -21,6 +21,13 @@ export const Hero = () => {
     offset: ["start end", "end start"],
   });
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  
   const backgroundPositionY = useTransform(
     scrollYProgress,
     [0, 1],
@@ -128,7 +135,7 @@ export const Hero = () => {
           Absolvent der Technischen Informatik im Bereich Embedded Systems.
         </p>
         <div className="flex justify-center mt-5">
-          <Link href="/projects">
+          <Link href="#projects" onClick={(e) => { e.preventDefault(); scrollToSection('projects'); }}>
             <ButtonSkill>Projekte erkunden 👋</ButtonSkill>
           </Link>
         </div>

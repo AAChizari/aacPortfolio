@@ -19,7 +19,7 @@ const portfolioProjects = [
       { title: "Ermittlung motorisch-kognitiver Fähigkeiten." },
       { title: "Entwickel für Fachliche Zwecke." },
     ],
-    link: "",
+    link: "https://aachizari.github.io/acaReactPage/#home",
     image: acaReactDisplay,
   },
   {
@@ -53,10 +53,18 @@ const portfolioProjects = [
       { title: "erlernen von Next.js, Tailwind, Framer Motion" },
       { title: "Presentation meiner Projekte" },
     ],
-    link: "/portfolio",
+    link: "#home",
     image: portfolioDisplay,
   },
 ];
+
+
+const scrollToSection = (sectionId: string) => {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  }
+};
 
 export const Projects = () => {
   return (
