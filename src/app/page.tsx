@@ -11,6 +11,7 @@ import { Projects } from "@/sections/Projects";
 import { Tape } from "@/sections/Tape";
 import { Footer } from "@/sections/Footer";
 
+
 export default function Home() {
   return (
     <>

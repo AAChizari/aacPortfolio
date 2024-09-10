@@ -33,8 +33,8 @@ const config: Config = {
         "ping-large": "ping-large 1s ease-in-out infinite",
         "move-left": "move-left 1s linear infinite",
         "move-right": "move-right 1s linear infinite",
-        'slide-left': 'slideLeft 0.5s ease-out',
-        'slide-right': 'slideRight 0.5s ease-out',
+        "slide-left": "slideLeft 0.5s ease-out",
+        "slide-right": "slideRight 0.5s ease-out",
       },
       keyframes: {
         "ping-large": {
@@ -60,16 +60,16 @@ const config: Config = {
           },
         },
         slideLeft: {
-          '0%': { transform: 'translateX(100%)' },
-          '100%': { transform: 'translateX(0)' },
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(0)" },
         },
         slideRight: {
-          '0%': { transform: 'translateX(-100%)' },
-          '100%': { transform: 'translateX(0)' },
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(0)" },
         },
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };
 export default config;
