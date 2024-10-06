@@ -1,5 +1,9 @@
 "use client";
 
+import Xing from "@/assets/socials/social-xing.svg";
+import Linkedin from "@/assets/socials/social-linkedin.svg";
+import Github from "@/assets/socials/social-github.svg";
+
 import Link from "next/link";
 import { useRef } from "react";
 import Image from "next/image";
@@ -128,9 +132,39 @@ export const Hero = () => {
           />
         </div>
         {/* end image */}
-        <h1 className=" font-serif font-extrabold text-3xl md:text-6xl md:leading-none tracking-tighter bg-white bg-clip-text text-center">
+        <div className="flex flex-col items-center">
+        <h1 className="font-serif font-extrabold text-3xl md:text-6xl md:leading-none tracking-tighter bg-white bg-clip-text text-center">
           Amir Aschkan Chizari
         </h1>
+        <div className="flex flex-row items-center gap-8 mt-4">
+            <a
+              href="https://www.linkedin.com/in/amir-chizari-2047192a7/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn Profil"
+              className="text-white/70 hover:text-white transition duration-300 transform hover:scale-150"
+            >
+              <Linkedin className="w-6 h-6" />
+            </a>
+            <a
+              href="https://www.xing.com/profile/Amir_Chizari061776/web_profiles?expandNeffi=true"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Xing Profil"
+              className="text-white/70 hover:text-white transition duration-300 transform hover:scale-150"
+            >
+              <Xing className="w-6 h- 6" />
+            </a>
+            <a
+              href="https://github.com/AAChizari"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub Profil"
+              className="text-white/70 hover:text-white transition duration-300 transform hover:scale-150"
+            >
+              <Github className="w-6 h-6" />
+            </a>
+          </div>
         <p className=" text-lg md:text-xl text-white/70 mt-4 text-center max-w-lg mx-auto">
           Absolvent der Technischen Informatik im Bereich Embedded Systems.
         </p>
@@ -138,6 +172,7 @@ export const Hero = () => {
           <Link href="#projects" onClick={(e) => { e.preventDefault(); scrollToSection('projects'); }}>
             <ButtonSkill>Projekte erkunden 👋</ButtonSkill>
           </Link>
+        </div>
         </div>
       </div>
     </motion.section>

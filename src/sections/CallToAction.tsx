@@ -99,7 +99,7 @@ export const CallToAction = () => {
             className="text-center"
             />
             <Text
-            colorTitle="Page in Progress"
+            colorTitle="click to copy my email"
             className="text-center"
             />
 

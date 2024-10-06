@@ -9,11 +9,7 @@ import logoBHT from "@/assets/logoBHT.png";
 
 import { useRef } from "react";
 import starsBg from "@/assets/stars.png";
-import {
-  motion,
-  useScroll,
-  useTransform,
-} from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export const AboutPage = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -35,22 +31,78 @@ export const AboutPage = () => {
       image: IOAnalytica,
       date: "September 2021 - Februar 2023",
       title: "Werkstudent",
-      description: "IT-Sicherheit & Produktentwicklung: Modellierung und Implementierung von Sicherheitsprodukten für Penetrationstests, Hardwareauswahl, Endtests. FDM 3D-Druck: Erfahrung mit FDM-Verfahren, CAD-Tools für Gehäuseentwicklung. Technische Dokumentation: Erstellung und Pflege technischer Dokumentationen. Einblicke: Ansible, Cloud Engineering.",
-      techStack: ["Windows", "Linux", "macOS", "GitHub", "Git", "Docker", "StarUML", "Fusion 360", "Adobe Photoshop", "MS Office", "Overleaf", "Markdown"],
+      description: [
+        "Mitverantwortlich für Modellierung und Implementierung von IT-Sicherheitsprodukten.",
+        "Durchführung von Penetrationstests.",
+        "Konzeption bis Fertigstellung, inklusive Hardwareauswahl und Montage.",
+        "Durchführung von Endtests u. Qualitätssicherung.",
+        "Nutzung von FDM-Druckverfahren zur Entwicklung von Gehäusen und Komponenten.",
+        "Einsatz von CAD-Tools wie Autodesk Fusion 360 zur Erstellung präziser 3D-Modelle.",
+        "Erfolgreicher 3D-Druck von Prototypen und Komponenten.",
+        "Mitwirkung bei Erstellung und Pflege technischer Dokumentationen.",
+      ],
+      techStack: [
+        "Windows",
+        "Linux",
+        "macOS",
+        "GitHub",
+        "Git",
+        "Docker",
+        "StarUML",
+        "Fusion 360",
+        "Adobe Photoshop",
+        "MS Office",
+        "Overleaf",
+        "Markdown",
+      ],
     },
     {
       image: IOAnalytica,
       date: "April 2021 - August 2021",
       title: "Praktikant",
-      description: "Systemadministration Entwurf und Modellierung von Bauteilen mit Autodesk Fusion 360",
-      techStack: ["Windows", "Linux", "macOS", "GitHub", "Git", "Docker", "StarUML", "Fusion 360", "Adobe Photoshop", "MS Office", "Overleaf", "Markdown"],
+      description: [
+        "Design und 3D-Druck von Gehäuseteilen.",
+        "Tests von Komponenten, Montage und Endtest von Geräten.",
+        "Softwareentwicklung durch Tests von Geräten im praktischen Einsatz.",
+        "Erstellung (Adobe, Markdown, LaTex, PDF) und Herstellung von Dokumentationen.",
+      ],
+      techStack: [
+        "Windows",
+        "Linux",
+        "macOS",
+        "GitHub",
+        "Git",
+        "Docker",
+        "StarUML",
+        "Fusion 360",
+        "Adobe Photoshop",
+        "MS Office",
+        "Overleaf",
+        "Markdown",
+      ],
     },
     {
       image: logoBHT,
       date: "2015-2024",
       title: "Bachelor of Engineering",
-      description: "Meine Abschlussarbeit konzentrierte sich auf die Entwicklung einer App als Reaktionsmessgerät für die Ermittlung motorisch-kognitiver Fähigkeiten",
-      techStack: ["Android Studio", "Visual Studio", "Kotlin", "C", "C++", "Linux", "macOS", "GitHub", "Git", "Firebase", "StarUML", "Overleaf", "Markdown"],
+      description: [
+        "Meine Abschlussarbeit konzentrierte sich auf die Entwicklung einer Android App als Reaktionsmessgerät für die Ermittlung motorisch-kognitiver Fähigkeiten.",
+      ],
+      techStack: [
+        "Android Studio",
+        "Visual Studio",
+        "Kotlin",
+        "C",
+        "C++",
+        "Linux",
+        "macOS",
+        "GitHub",
+        "Git",
+        "Firebase",
+        "StarUML",
+        "Overleaf",
+        "Markdown",
+      ],
     },
   ];
 
@@ -63,7 +115,7 @@ export const AboutPage = () => {
       <div className="container">
         <motion.div
           ref={borderedDivRef}
-          className="border border-[#EC6F00]/15 py-24 rounded-xl overflow-hidden relative group"
+          className="border border-[#EC6F00]/15 p-4 rounded-xl overflow-hidden relative group"
           animate={{
             backgroundPositionX: starsBg.width,
           }}
@@ -77,9 +129,11 @@ export const AboutPage = () => {
             backgroundImage: `url(${starsBg.src})`,
           }}
         >
-          <Text colorTitle="Lebenslauf" className="text-center" />
-          <Text title="Werdegang" className="text-center font-semibold" />
-          <Text description="Schaue dir meinen Lebenslauf an" className="text-center mb-12" />
+          <Text colorTitle="Werdegang" className="text-center" />
+          <Text
+            title="Lebenslauf"
+            className="text-center font-semibold mb-12"
+          />
 
           <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
             {cvData.map((item, index) => (
@@ -87,14 +141,43 @@ export const AboutPage = () => {
                 {index > 0 && <hr className="bg-[#EC6F00]" />}
                 <div className="timeline-middle">
                   <div className="w-12 h-12 rounded-full border-2 border-[#EC6F00] bg-zinc-700 flex items-center justify-center">
-                    <Image src={item.image} alt={item.title} width={32} height={32} className="rounded-full" />
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      width={32}
+                      height={32}
+                      className="rounded-full"
+                    />
                   </div>
                 </div>
-                <div className={`timeline-${index % 2 === 0 ? 'start' : 'end'} mb-10 mt-5 md:${index % 2 === 0 ? 'text-end' : 'text-start'}`}>
-                  <time className="font-mono italic text-[#FFB16D]">{item.date}</time>
-                  <div className="text-lg md:text-xl font-black ">{item.title}</div>
-                  <p className="text-zinc-300 mt-2 text-left">{item.description}</p>
-                  <div className={`flex flex-wrap gap-2 mt-4 ${index % 2 === 0 ? 'justify-end' : 'justify-start'}`}>
+                <div
+                  className={`timeline-${index % 2 === 0 ? "start" : "end"} mb-10 mt-5 md:${index % 2 === 0 ? "text-end" : "text-start"}`}
+                >
+                  <time className="font-serif font-bold text-[#FFB16D] m-1">
+                    {item.date}
+                  </time>
+                  <div className="text-lg md:text-xl font-black ">
+                    {item.title}
+                  </div>
+                  {typeof item.description === "string" ? (
+                    <p className="text-zinc-300 mt-2 text-left">
+                      {item.description}
+                    </p>
+                  ) : (
+                    <ul className="text-zinc-300 mt-2 text-left list-none pl-5 space-y-2">
+                      {item.description.map((point, idx) => (
+                        <li key={idx} className="relative pl-5">
+                          <span className="absolute left-0 top-0">•</span>
+                          <span className="inline-block w-full whitespace-pre-wrap">
+                            {point}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                  <div
+                    className={`flex flex-wrap gap-2 mt-4 ${index % 2 === 0 ? "justify-end" : "justify-start"}`}
+                  >
                     {filterSkills(item.techStack).map((skill) => (
                       <Image
                         key={skill.name}

@@ -25,6 +25,7 @@ export default function Home() {
       </section>
       <Tape />
       <Skills />
+      <Scroll />
       <section id="about">
         <AboutPage />
       </section>
